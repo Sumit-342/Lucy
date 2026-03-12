@@ -1,8 +1,8 @@
 import joblib
 
 
-model = joblib.load("models/lucy_model_v0_01.pkl")
-vectorizer = joblib.load("models/lucy_vectorizer_v0_01.pkl")
+model = joblib.load("models/lucy_model_v0_02.pkl")
+vectorizer = joblib.load("models/lucy_vectorizer_v0_02.pkl")
 
 
 def predict_emotion (text) :
@@ -19,4 +19,4 @@ if __name__ == "__main__":
     
     emotion = predict_emotion(user_input)
 
-    print("Lucy:", emotion)
+    print("Detected Emotion : ", emotion)
