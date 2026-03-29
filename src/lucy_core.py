@@ -1,8 +1,15 @@
 import joblib
+import re
+
+model = joblib.load("models/lucy_pipeline_v0_1.pkl")
 
 
-model = joblib.load("models/lucy_pipeline_v0_03.pkl")
 
+def clean_text(text):
+    text = str(text)
+    text = re.sub(r'[\U00010000-\U0010ffff]', '', text)  # remove emojis
+    text = re.sub(r'[^\x00-\x7F]+', '', text)            # remove broken chars
+    return text.lower()
 
 
 def predict_emotion (text) :
@@ -19,6 +26,10 @@ if __name__ == "__main__":
         if user_input.lower() == "exit" :
             print("Lucy: Goodbye 👋👋")
             break
+
+        if not user_input.strip():  
+            print("Lucy: Please say something")
+            continue
 
         emotion , probs = predict_emotion(user_input)
 
