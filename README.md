@@ -1,6 +1,7 @@
 # Lucy – Personal Emotion Detection AI 🤖💙
 
 Lucy is a personal AI assistant project built using Python and Machine Learning.
+
 The goal of Lucy is to understand human emotions from text and gradually evolve into an intelligent, emotionally aware AI companion.
 
 This project is being developed step-by-step, with each version improving Lucy’s ability to understand emotions, language, and human intent.
@@ -11,21 +12,18 @@ This project is being developed step-by-step, with each version improving Lucy�
 
 The first working version of Lucy.
 
-Features
-
+### Features
 - Detects basic emotions from text:
-  - Happy
-  - Sad
-  - Angry
+  - Happy  
+  - Sad  
+  - Angry  
 
 ### Model
-
-- TF-IDF Vectorizer
-- Logistic Regression
+- TF-IDF Vectorizer  
+- Logistic Regression  
 
 ### Execution
-
-- Terminal-based emotion prediction
+- Terminal-based emotion prediction  
 
 ---
 
@@ -34,30 +32,26 @@ Features
 Improved emotion detection and experimentation with multiple models.
 
 ### Improvements
-
 - Added two new emotions:
-  - Love
-  - Surprise
-- Performed Exploratory Data Analysis (EDA)
-- Cleaned dataset and removed duplicates
-- Implemented Train-Test Split
+  - Love  
+  - Surprise  
+- Performed Exploratory Data Analysis (EDA)  
+- Cleaned dataset and removed duplicates  
+- Implemented Train-Test Split  
 - Tested multiple models:
-  - Logistic Regression
-  - Naive Bayes
-  - Support Vector Machine (SVM)
+  - Logistic Regression  
+  - Naive Bayes  
+  - Support Vector Machine (SVM)  
 
 ### Final Model
-
-- TF-IDF Vectorizer
-- Logistic Regression
+- TF-IDF Vectorizer  
+- Logistic Regression  
 
 ### Accuracy
-
 - ~79%
 
 ### Execution
-
-- Terminal-based emotion detection
+- Terminal-based emotion detection  
 
 ---
 
@@ -66,119 +60,155 @@ Improved emotion detection and experimentation with multiple models.
 Introduced a structured machine learning pipeline.
 
 ### Improvements
-
-- Implemented Scikit-learn Pipeline
-- Used GridSearchCV for hyperparameter tuning
-- Combined TF-IDF and model into a single pipeline
-- Added confidence score for predictions
-- Improved project structure
+- Implemented Scikit-learn Pipeline  
+- Used GridSearchCV for hyperparameter tuning  
+- Combined TF-IDF and model into a single pipeline  
+- Added confidence score for predictions  
+- Improved project structure  
 
 ### Supported Emotions
-
-- Angry
-- Happy
-- Sad
-- Love
-- Surprise
-- Hate
-- Enthusiasm
+- Angry  
+- Happy  
+- Sad  
+- Love  
+- Surprise  
+- Hate  
+- Enthusiasm  
 
 ### Model Architecture
-
-- TF-IDF Vectorizer
-- Logistic Regression
-- Scikit-learn Pipeline
-- GridSearchCV
+- TF-IDF Vectorizer  
+- Logistic Regression  
+- Scikit-learn Pipeline  
+- GridSearchCV  
 
 ### Accuracy
-
 - ~79%
 
 ---
 
 ## 🚀 Version v0.1 (Hinglish Breakthrough) 🔥
 
-This is a major milestone in Lucy’s journey.
+A major milestone in Lucy’s journey.
 
 Lucy can now understand Hinglish (Hindi + English mixed language), making it more natural and relatable for real-world conversations.
 
 ### Key Improvements
-
 - Combined multiple datasets:
-  - English dataset
-  - AI-generated Hinglish dataset
-  - Real Hinglish dataset (Kaggle)
-- Built a unified emotion mapping system
-- Cleaned and standardized multi-source data
-- Handled inconsistent labels (e.g., angry vs anger, joy vs happy)
-- Created a custom 7-emotion classification system
+  - English dataset  
+  - AI-generated Hinglish dataset  
+  - Real Hinglish dataset (Kaggle)  
+- Built a unified emotion mapping system  
+- Cleaned and standardized multi-source data  
+- Handled inconsistent labels  
+- Created a custom 7-emotion classification system  
 
 ### Supported Emotions
-
-- Happy
-- Sad
-- Angry
-- Love
-- Surprise
-- Hate
-- Enthusiasm
+- Happy  
+- Sad  
+- Angry  
+- Love  
+- Surprise  
+- Hate  
+- Enthusiasm  
 
 ### Model
-
-- TF-IDF Vectorizer
-- Logistic Regression
-- SVM (tested)
-- Scikit-learn Pipeline
+- TF-IDF Vectorizer  
+- Logistic Regression  
+- SVM (tested)  
+- Scikit-learn Pipeline  
 
 ### Accuracy
+- ~73%
 
-- ~73% (Hinglish is more complex, still improving)
+### Notes
+- Hinglish understanding is complex and evolving  
+- Accuracy dropped slightly due to real-world complexity  
 
-## Notes
+---
 
-- Model may produce incorrect predictions in some cases
-- Hinglish understanding is still evolving
-- This version focuses on capability over perfection
+## 🚀 Version v0.2 (Fusion Intelligence) 🧠🔥
+
+This version introduces multi-source emotion understanding, making Lucy smarter and more reliable.
+
+Lucy no longer depends on just text — it now understands emotions from both text and emojis and combines them intelligently.
+
+---
+
+### 🚀 Key Features
+- Hinglish Text Emotion Detection  
+- Emoji Emotion Detection 😄😢😂  
+- Fusion Logic System  
+
+---
+
+### 🧠 Fusion Modes
+- `text_only` → when no emoji present  
+- `text_strong` → when text confidence is high  
+- `emoji_strong` → when emoji clearly dominates  
+- `text_emoji_agree` → when both agree  
+- `emoji_priority` → when emoji overrides text  
+
+---
+
+### ⚙️ Model Architecture
+- TF-IDF Vectorizer  
+- Logistic Regression  
+- Scikit-learn Pipeline  
+- Confidence-based decision system  
+- Rule-based fusion layer  
+
+---
+
+### 🎯 Improvements
+- Better real-world emotion detection  
+- Handles mixed signals (text + emoji)  
+- More human-like interpretation  
+- Introduced decision-level intelligence (not just prediction)  
+
+---
+
+### ⚠️ Limitations
+- Cannot fully understand sarcasm  
+- No conversation context yet  
+- Emoji meaning can sometimes mislead  
+- Confidence ≠ always correct  
 
 ---
 
 ## 🛠️ Technologies Used
-
-- Python
-- Scikit-learn
-- Pandas
-- NumPy
-- Joblib
+- Python  
+- Scikit-learn  
+- Pandas  
+- NumPy  
+- Joblib  
 
 ---
 
 ## 📁 Project Structure
-
 Lucy/
 │
 ├── models/
-│   └── lucy_pipeline_v0_1.pkl
+│ └── lucy_pipeline_v0_2.pkl
 │
 ├── src/
-│   └── lucy_core.py
+│ └── lucy_core.py
 │
 └── README.md
 
 ---
 
+
 ## 🌱 Future Roadmap
 
 Lucy will continue evolving into a more human-like emotional AI.
 
-Planned improvements:
-
-- Emoji emotion detection
-- Text + Emoji emotion fusion
-- Emotion-aware responses
-- Voice interaction (calm, human-like voice)
-- Emotion-based UI (rain, nature, mood visuals)
-- Deep learning / transformer-based models
-- Context-aware conversation
+### Planned Improvements
+- Context-aware conversation (short-term memory) 🧠  
+- Emotion-aware responses  
+- Voice interaction (calm, human-like voice)  
+- Emotion-based UI (rain, nature, mood visuals)  
+- Advanced ML / Deep Learning models  
+- Personalization & memory system  
 
 ---
 
@@ -187,17 +217,18 @@ Planned improvements:
 Lucy is not just a machine learning project.
 
 It is an attempt to build an AI that:
-
-- Understands emotions
-- Responds with empathy
-- Feels natural to talk to
+- Understands emotions  
+- Responds with empathy  
+- Feels natural to talk to  
 
 The long-term vision is to create a personal AI companion that understands not just words, but the emotions behind them.
 
 ---
 
-### 💬 Final Note
+## 💬 Final Note
 
-Lucy is still learning.
+Lucy is still learning.  
+And so is the developer. 😄  
 
-And so is the developer. 😄
+But with each version…  
+it’s getting closer to feeling human. 🤍
