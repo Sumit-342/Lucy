@@ -32,7 +32,8 @@ def get_emoji_emotion(text):                        # emotion to emotion mapping
     if not emotions:
         return None
     
-    return Counter(emotions).most_common(1)[0][0]
+    most_common = Counter(emotions).most_common(1)
+    return most_common[0][0] if most_common else None
 
 
 def get_text_emotion(text):                         # text emotion function
@@ -45,7 +46,7 @@ def get_text_emotion(text):                         # text emotion function
 
 def predict_final(text):                                        # text + emoji fusion
     text_emotion , text_confidence = get_text_emotion(text)
-    emoji_emotion = get_emoji_emotion(text)
+    emoji_emotion = get_emoji_emotion(history[-1])
 
     if emoji_emotion is None:
         return text_emotion , text_confidence , "text_only"
@@ -66,6 +67,23 @@ def predict_final(text):                                        # text + emoji f
         else:
             return emoji_emotion,text_confidence , "emoji_priority"
 
+history = []
+def update_history(new_msg):
+    
+    history.append(new_msg)
+
+    if len(history)>3:
+        history.pop(0)
+
+
+def get_context():
+    if len(history) == 1:
+        return history[0]
+    
+    return " ".join(history)
+    
+
+
 def analyze(text):                                      # output wrapper
     emotion , confidence , mode = predict_final(text)
 
@@ -80,7 +98,7 @@ def analyze(text):                                      # output wrapper
 if __name__ == "__main__":
     
     while True :
-        user_input = input("You: ")
+        user_input = input("\nYou: ")
         if user_input.lower() == "exit" :
             print("Lucy: Goodbye 👋👋")
             break
@@ -88,13 +106,18 @@ if __name__ == "__main__":
         if not user_input.strip():  
             print("Lucy: Please say something")
             continue
+        
+        update_history(user_input)
+        context_text = get_context()
+        result = analyze(context_text)
 
-        result = analyze(user_input)
 
-        print(f"\nLucy: ")
         print(f"Emotion   : {result['emotion']}")
         print(f"Confidence: {result['confidence']}")
-        print(f"Mode      : {result['mode']}")
+        print(f"Mode : {result['mode']}")
+        print("History :",history)
+        print("Context : ",context_text)
+        
 
 
       

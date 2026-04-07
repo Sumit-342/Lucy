@@ -175,6 +175,67 @@ Lucy no longer depends on just text — it now understands emotions from both te
 
 ---
 
+🚀 Version v0.4 (Context & Memory Engine) 🧠💬
+
+This version introduces short-term memory and context-aware emotion detection, making Lucy more conversational and closer to real human understanding.
+
+Lucy no longer analyzes just a single message — it now considers recent conversation history to interpret emotions more accurately.
+
+---
+
+🚀 Key Features
+
+- Short-term memory (last 3 messages)
+- Context-based emotion analysis
+- Improved real-world conversation handling
+- More human-like emotional understanding
+
+---
+
+🧠 How It Works
+
+- Stores last 3 user messages
+- Combines them into a single context input
+- Sends context to the existing ML pipeline
+- Applies fusion logic on contextual input
+
+---
+
+⚙️ System Design
+
+- Memory Layer → stores conversation history
+- Context Builder → merges recent messages
+- Existing ML Pipeline (unchanged)
+- Emoji + Text Fusion System
+
+---
+
+🎯 Improvements
+
+- Handles emotional transitions (sad → recovery)
+- Better interpretation of mixed emotions
+- Reduces wrong predictions from single messages
+- More realistic behavior compared to isolated predictions
+
+---
+
+⚠️ Limitations
+
+- Model not trained specifically on contextual data
+- Hinglish phrases still limited
+- Emoji meaning can vary based on context
+- Cannot fully detect sarcasm yet
+
+---
+
+🧠 Key Insight
+
+This version improves the system, not the model.
+
+Instead of retraining, Lucy now processes smarter input — making it more effective without changing the underlying ML model.
+
+---
+
 ## 🛠️ Technologies Used
 - Python  
 - Scikit-learn  
@@ -203,7 +264,7 @@ Lucy/
 Lucy will continue evolving into a more human-like emotional AI.
 
 ### Planned Improvements
-- Context-aware conversation (short-term memory) 🧠  
+- Improved contextual understanding (long -term memory planned) 🧠  
 - Emotion-aware responses  
 - Voice interaction (calm, human-like voice)  
 - Emotion-based UI (rain, nature, mood visuals)  
