@@ -2,6 +2,8 @@ import joblib
 import emoji
 from collections import Counter
 import pandas as pd
+from response_engine import get_response
+from language_detector import detect_language
 
 model = joblib.load("models/lucy_pipeline_v0_2.pkl")
 df_emoji = pd.read_csv("dataset/emoji_emotions_final.csv")
@@ -45,7 +47,7 @@ def get_text_emotion(text):                         # text emotion function
 
 
 def predict_final(text):                                        # text + emoji fusion
-    text_emotion , text_confidence = get_text_emotion(text)
+    text_emotion , text_confidence = get_text_emotion(text)   # emoji can dubliacte in context 
     emoji_emotion = get_emoji_emotion(history[-1])
 
     if emoji_emotion is None:
@@ -86,6 +88,7 @@ def get_context():
 
 def analyze(text):                                      # output wrapper
     emotion , confidence , mode = predict_final(text)
+    
 
     return {
         "emotion":emotion,
@@ -110,6 +113,8 @@ if __name__ == "__main__":
         update_history(user_input)
         context_text = get_context()
         result = analyze(context_text)
+        language = detect_language(user_input)
+        reply = get_response(result["emotion"],language)
 
 
         print(f"Emotion   : {result['emotion']}")
@@ -117,6 +122,8 @@ if __name__ == "__main__":
         print(f"Mode : {result['mode']}")
         print("History :",history)
         print("Context : ",context_text)
+        print("Langauge : ",language)
+        print("Lucy : ",reply)
         
 
 
