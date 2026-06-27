@@ -13,6 +13,14 @@ def get_response(emotion , language) :
     ]
 
     if filtered.empty :
-        return "I am here for you"
+        return (
+            "I am here for you",
+            "Would you like to tell me more ?"
+            )
 
-    return random.choice(filtered["response"].tolist())    
+    row = filtered.sample(1).iloc[0]
+
+    return (
+        row["response"],
+        row["follow_up"],
+    )   

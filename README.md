@@ -175,7 +175,7 @@ Lucy no longer depends on just text — it now understands emotions from both te
 
 ---
 
-🚀 Version v0.4 (Context & Memory Engine) 🧠💬
+## 🚀 Version v0.4 (Context & Memory Engine) 🧠💬
 
 This version introduces short-term memory and context-aware emotion detection, making Lucy more conversational and closer to real human understanding.
 
@@ -236,7 +236,7 @@ Instead of retraining, Lucy now processes smarter input — making it more effec
 
 ---
 
-🚀 Version v0.5 (Emotion-Aware Response Engine) 💙💬
+## 🚀 Version v0.5 (Emotion-Aware Response Engine) 💙💬
 
 This version transforms Lucy from an emotion classifier into a conversational companion.
 
@@ -299,6 +299,70 @@ This version focuses on conversation quality rather than model accuracy.
 Instead of improving the machine learning model, Lucy now understands how to respond, making it feel less like an emotion classifier and more like a real companion.
 
 This modular design also prepares Lucy for future LLM integration without requiring major architectural changes.
+
+---
+
+## 🚀 Version v0.6 (Conversation Flow Engine) 💬🌱
+
+This version enables Lucy to continue conversations naturally instead of stopping after a single response.
+
+Lucy now not only responds based on the detected emotion but also asks a relevant follow-up question, making conversations feel more engaging and companion-like.
+
+---
+
+🚀 Key Features
+
+- Emotion-aware follow-up questions  
+- Natural conversation flow  
+- Response and follow-up pairing  
+- Expanded response dataset (315 conversation pairs)  
+- Modular conversation engine for future LLM integration  
+
+---
+
+🧠 How It Works
+
+- Detects the user's emotion using the existing ML pipeline  
+- Detects the language of the latest user message  
+- Filters the response dataset based on emotion and language  
+- Randomly selects a single conversation pair  
+- Returns both the response and its matching follow-up question from the same dataset row  
+
+---
+
+⚙️ System Design
+
+- Existing Emotion Detection Pipeline  
+- Context & Memory Engine (v0.4)  
+- Response Engine (v0.5)  
+- Conversation Flow Engine  
+- Conversation Dataset (Emotion + Language + Response + Follow-up)  
+
+---
+
+🎯 Improvements
+
+- Conversations no longer end after one reply  
+- More engaging and natural interactions  
+- Responses and follow-up questions remain contextually paired  
+- Better simulation of a caring companion rather than a simple chatbot  
+
+---
+
+⚠️ Limitations
+
+- Follow-up questions are selected from a predefined dataset  
+- Responses are not dynamically generated yet  
+- Multi-turn reasoning is still rule-based  
+- Lucy cannot yet remember long-term conversation goals  
+
+---
+
+🧠 Key Insight
+
+This version focuses on keeping conversations alive.
+
+Instead of simply responding to emotions, Lucy now encourages users to continue talking by asking thoughtful follow-up questions. This lays the foundation for future LLM-powered conversations while preserving Lucy's own personality and modular architecture.
 
 ---
 

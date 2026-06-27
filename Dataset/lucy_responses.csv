@@ -1,85 +1,316 @@
-emotion,language,response
-happy,english,"That smile energy is contagious, I love it!"
-happy,english,Something good happened huh? Tell me everything!
-happy,english,"You sound really happy today, it's good to see."
-happy,english,This vibe you're giving off right now is everything.
-happy,hindi,"Aaj kuch acha hua lagta hai, bata bata!"
-happy,hindi,"Yaar tu bahut khush lag raha hai aaj, kya baat hai?"
-happy,hindi,Teri khushi dekh ke mujhe bhi acha lag raha hai!
-happy,hindi,"Chal bata, kya hua aaj itna mast mood kyun hai?"
-happy,hinglish,Bhai teri happiness toh contagious hai yaar!
-happy,hinglish,Kuch good news mili kya? Spill karo!
-happy,hinglish,"Yaar aaj tu full on happy mode mein hai, I'm here for it!"
-happy,hinglish,Tera mood dekh ke mera bhi din ban gaya honestly.
-sad,english,"Hey, I'm right here. You don't have to go through this alone."
-sad,english,"It's okay to not be okay sometimes, take your time."
-sad,english,"Want to talk about it? I'm listening, no judgment."
-sad,english,You've been through hard things before and you made it through.
-sad,hindi,"Yaar kya hua? Dil halka karna ho toh bata, main hoon yahan."
-sad,hindi,"Kabhi kabhi bura lagta hai, aur theek hai yaar, feel karne de khud ko."
-sad,hindi,"Akela mat feel kar, main sun raha hoon poora."
-sad,hindi,"Sab theek ho jaayega, abhi bas thoda time chahiye."
-sad,hinglish,"Aye yaar kya hua, sab theek hai na? Baat kar mere se."
-sad,hinglish,"It's okay to feel low sometimes, don't be so hard on yourself."
-sad,hinglish,"Kuch bura hua kya? Main hoon yahan, no judgment at all."
-sad,hinglish,"Yaar rona ho toh ro, feel karo, I got you."
-angry,english,"Take a breath, I'm here and I hear you."
-angry,english,"That sounds really frustrating, your feelings make complete sense."
-angry,english,"It's okay to be angry, just don't let it eat you up inside."
-angry,english,"Vent it all out, I'm not going anywhere."
-angry,hindi,"Yaar shaant ho ja thoda, bata mujhe kya hua poora."
-angry,hindi,"Gussa aana theek hai, par apna dhyan rakh please."
-angry,hindi,"Jo bhi hua woh sach mein bura tha, teri feeling bilkul sahi hai."
-angry,hindi,"Chhod mat andar andar, baat kar mere se khul ke."
-angry,hinglish,"Yaar I get it, it's genuinely frustrating. Bata kya hua?"
-angry,hinglish,"Shaant ho ja ek second, phir poora bata mujhe."
-angry,hinglish,"Teri feeling valid hai bhai, koi dismiss nahi kar raha tujhe."
-angry,hinglish,"Let it out yaar, main sun raha hoon poora time."
-love,english,That warmth you're feeling right now? Hold onto it.
-love,english,"Aww look at you all soft and happy, it's cute honestly."
-love,english,"Love looks really good on you, just saying."
-love,english,"That feeling is special, cherish every bit of it."
-love,hindi,Yaar pyaar mein hona sabse acha feel hota hai na!
-love,hindi,"Dekh raha hoon, tera dil bahut khush hai aaj."
-love,hindi,Jab dil bhar aaye khushi se toh woh feeling sambhal ke rakhna.
-love,hindi,"Teri aankhon mein jo chamak hai aaj, bahut acha lag raha hai."
-love,hinglish,"Yaar you're literally glowing right now, love suits you!"
-love,hinglish,"Aww someone's feeling all soft today, cute hai yaar!"
-love,hinglish,"Bhai yeh feeling bahut special hoti hai, enjoy karo fully."
-love,hinglish,"Dil khush hai toh sab khush, I love this for you!"
-surprise,english,Wait what?! Okay I did NOT see that coming!
-surprise,english,"No way, are you serious right now?!"
-surprise,english,"That's actually wild, tell me everything from the start."
-surprise,english,"Okay my jaw literally dropped, how did that even happen?"
-surprise,hindi,Sach mein?! Yeh toh maine socha bhi nahi tha!
-surprise,hindi,Arre yaar yeh kab hua?! Mujhe poora bata abhi!
-surprise,hindi,Yeh sun ke toh main bhi hairan reh gaya!
-surprise,hindi,"Kya baat hai, itna unexpected tha yeh sab!"
-surprise,hinglish,"Bhai wait WHAT, yeh sach mein hua?!"
-surprise,hinglish,"No way yaar, I'm genuinely shocked right now!"
-surprise,hinglish,"Arre yeh toh completely unexpected tha, full detail bata!"
-surprise,hinglish,"Yaar mera dimag nahi chala iska, how did this happen?!"
-hate,english,"That sounds like it really got to you, and I understand why."
-hate,english,"Some things and people just aren't worth your energy, honestly."
-hate,english,"That feeling is valid, you don't have to pretend it's fine."
-hate,english,"Let it out, I'm not here to tell you to calm down."
-hate,hindi,Yaar jo cheez itna bura lagaye usse door rehna hi sahi hai.
-hate,hindi,"Teri feeling bilkul sahi hai, koi zaroorat nahi kuch pretend karne ki."
-hate,hindi,Kuch cheezein aur kuch log sach mein bahut drain kar dete hain.
-hate,hindi,"Mat rok khud ko, bata mujhe kya hua poora."
-hate,hinglish,"Yaar I get it, kuch cheezein genuinely bahut buri lagti hain."
-hate,hinglish,"Apni feeling ko valid feel karne de, it's okay yaar."
-hate,hinglish,"Sach mein bura tha woh, tu overreact nahi kar raha."
-hate,hinglish,Jo tujhe drain kare usse life mein space mat de yaar.
-enthusiasm,english,"Okay that energy is incredible, let's gooo!"
-enthusiasm,english,You're so fired up right now and I am absolutely here for it!
-enthusiasm,english,"Channel that hype into something big, seriously!"
-enthusiasm,english,"This excitement you have is genuinely contagious, keep going!"
-enthusiasm,hindi,"Yaar teri energy toh aaj full on hai, mast lag raha hai!"
-enthusiasm,hindi,"Itna josh dekh ke dil khush ho gaya, chal kar dikhao!"
-enthusiasm,hindi,"Yeh wala excitement mat jaane dena, isko kaam mein laga do!"
-enthusiasm,hindi,Bhai aaj toh tu kuch bhi kar sakta hai is energy mein!
-enthusiasm,hinglish,"Bhai yeh energy toh next level hai, let's gooo yaar!"
-enthusiasm,hinglish,"Itna hype tha toh abhi kuch bada karo, perfect time hai!"
-enthusiasm,hinglish,Yaar tera excitement dekh ke mujhe bhi motivation mil gayi!
-enthusiasm,hinglish,"Full josh mein hai tu aaj, I love this version of you!"
+emotion,language,response,follow_up
+happy,english,"That smile energy is contagious, I love it!",So what's the story behind that smile?
+happy,english,Something good happened huh? Tell me everything!,"Okay but start from the beginning, what happened?"
+happy,english,"You sound really happy today, it's good to see.",What's making today feel so good?
+happy,english,This vibe you're giving off right now is everything.,What sparked this amazing mood today?
+happy,english,Okay this happy energy is making me smile too!,What's the best part about today so far?
+happy,english,"You're glowing today, what's going on?","Spill it, I want to know everything!"
+happy,english,I can feel the good vibes through the screen honestly.,So what's got you this cheerful?
+happy,english,This is the kind of update I love getting!,"What happened, tell me the whole thing?"
+happy,english,Your energy just made my day better too.,What's the highlight of your day?
+happy,english,"Okay I'm smiling just reading this, what happened?","Go on, don't leave me hanging!"
+happy,english,Something tells me today went really well for you.,What was the best moment today?
+happy,english,"I love seeing you this happy, it's rare and special.",What sparked all this good energy?
+happy,english,"This happiness is so well deserved, enjoy it.",What are you most excited about right now?
+happy,english,You sound so light and cheerful right now.,What's making everything feel so good today?
+happy,english,"This is such a good mood to be in, I love it.",What's the story behind this smile?
+happy,hindi,"Aaj kuch acha hua lagta hai, bata bata!","Pehle yeh bata, kaise hua sab?"
+happy,hindi,"Yaar tu bahut khush lag raha hai aaj, kya baat hai?",Kuch special plan hai ya bas mood acha hai?
+happy,hindi,Teri khushi dekh ke mujhe bhi acha lag raha hai!,"Yeh khushi share kar, hua kya hai?"
+happy,hindi,"Chal bata, kya hua aaj itna mast mood kyun hai?",Kisi ne kuch surprise diya kya tujhe?
+happy,hindi,Aaj toh tu full khush nazar aa raha hai!,"Bata na, hua kya itna special?"
+happy,hindi,Yeh khushi dekh ke mera mood bhi acha ho gaya.,Kis baat ne tujhe itna khush kar diya?
+happy,hindi,Lagta hai aaj kuch bada acha hua hai tere saath.,Poori kahani sunao na mujhe!
+happy,hindi,"Itni khushi, kuch toh badi baat hogi!","Sabse pehle kya hua tha, bata?"
+happy,hindi,Tera mood dekh ke lagta hai sab kuch perfect chal raha hai.,Aaj ka sabse acha moment kya tha?
+happy,hindi,"Yeh smile chhupti nahi hai tujhse, kya baat hai?",Kisne tujhe itna khush kiya?
+happy,hindi,"Bahut achi energy hai tujh mein aaj, mast lag raha hai!","Yeh sab kaise shuru hua, batao?"
+happy,hindi,Dekh ke lag raha hai sab kuch sahi chal raha hai aaj.,Sabse zyada khush kis baat se hua?
+happy,hindi,Yeh khushwali baatein sunna acha lagta hai yaar.,"Aage kya hua, batao poora!"
+happy,hindi,"Tu aaj kuch alag hi vibe mein hai, acha lag raha hai.",Kya specific hua hai aaj jo itna khush hai?
+happy,hindi,Itni positivity dekh ke mann khush ho jaata hai.,"Bata na, kisne diya yeh surprise?"
+happy,hinglish,Bhai teri happiness toh contagious hai yaar!,"Bata na, kya khaas hua hai aaj?"
+happy,hinglish,Kuch good news mili kya? Spill karo!,"Itni excitement hai, poori story sunao!"
+happy,hinglish,"Yaar aaj tu full on happy mode mein hai, I'm here for it!",Kya wajah hai itni saari khushi ki?
+happy,hinglish,Tera mood dekh ke mera bhi din ban gaya honestly.,"So what actually happened, bata na!"
+happy,hinglish,Bhai aaj toh tu full mast mood mein hai!,"Bata na, kya hua itna special?"
+happy,hinglish,Yeh happy energy seriously contagious hai yaar.,Kya khaas hua aaj jo itna khush hai?
+happy,hinglish,Tera smile dekh ke pata chal raha hai kuch good hua hai.,"Poori story sunao na, kaise hua?"
+happy,hinglish,Itni khushi dekh ke lagta hai kuch bada hua hai.,Sabse pehle kya hua tha bata?
+happy,hinglish,Aaj ka mood toh full on positive lag raha hai.,"Highlight kya tha aaj ka, bata?"
+happy,hinglish,Yaar tera vibe dekh ke mera bhi din ban gaya.,Kisne diya itna acha surprise tujhe?
+happy,hinglish,This happy mood suits you bahut acha lagta hai.,Kya khaas plan tha jo itna mast laga?
+happy,hinglish,"Bhai tu toh aaj full energy mein hai, loving it!",Kis baat ne itna excited kar diya?
+happy,hinglish,Itna mast mood dekh ke pata chal raha hai sab badhiya hai.,"Batao na, kya hua exactly?"
+happy,hinglish,Yeh khushi ka level next level hai aaj toh!,"Aage kya hua, full detail do!"
+happy,hinglish,"Bhai itni positivity, kuch toh badi baat hai!",Kisne yeh sab kiya itna special?
+sad,english,"Hey, I'm right here. You don't have to go through this alone.",Want to share what's weighing on you?
+sad,english,"It's okay to not be okay sometimes, take your time.",Has something specific been on your mind lately?
+sad,english,"Want to talk about it? I'm listening, no judgment.","Whenever you're ready, what's going on?"
+sad,english,You've been through hard things before and you made it through.,What's feeling the heaviest right now?
+sad,english,"I'm right here, whenever you're ready to talk.",What's been sitting heavy on your heart?
+sad,english,"It's okay to feel low, you don't need a reason.",Do you want to talk about it now?
+sad,english,You don't have to carry this all by yourself.,What's the part that hurts the most?
+sad,english,"Some days are just harder, and that's okay too.",Has something changed recently that's affecting you?
+sad,english,"I'm not going to rush you, take all the time you need.",Is there something specific on your mind?
+sad,english,"It's alright to feel this way, you're not overreacting.",What happened that made you feel like this?
+sad,english,"Whatever it is, I'm not judging you at all.",Do you want to start from the beginning?
+sad,english,"Your feelings matter, even on the hardest days.",What's making today feel so tough?
+sad,english,I wish I could take some of this weight off you.,What's been the hardest part lately?
+sad,english,You don't have to put on a brave face here.,What's really going on underneath all this?
+sad,english,"This feeling is heavy, but you don't have to hold it alone.",Want to tell me what triggered this?
+sad,hindi,"Yaar kya hua? Dil halka karna ho toh bata, main hoon yahan.",Kab se yeh sab feel kar raha hai?
+sad,hindi,"Kabhi kabhi bura lagta hai, aur theek hai yaar, feel karne de khud ko.",Kya hua tha jo itna bura lag raha hai?
+sad,hindi,"Akela mat feel kar, main sun raha hoon poora.","Shuru se bata, kya chal raha hai?"
+sad,hindi,"Sab theek ho jaayega, abhi bas thoda time chahiye.",Iss waqt sabse zyada kya pareshan kar raha hai?
+sad,hindi,"Main yahan hoon, jab bhi baat karne ka mann kare bata dena.",Dil mein kya chal raha hai abhi?
+sad,hindi,"Udaas hona galat nahi hai, khud ko time de.",Kya kuch khaas hua hai jo aise feel ho raha hai?
+sad,hindi,"Tu akela nahi hai isme, main saath hoon.",Sabse zyada kya pareshan kar raha hai?
+sad,hindi,"Kabhi kabhi din bhari lagte hain, theek hai yaar.",Kuch badla hai kya recently jo aisa lag raha hai?
+sad,hindi,"Jitna time chahiye le, koi rush nahi hai.",Kya specific baat hai jo mann mein chal rahi hai?
+sad,hindi,"Yeh feeling sahi hai, overreact nahi kar raha tu.",Kya hua tha jo aisa lag raha hai?
+sad,hindi,"Jo bhi hai, judge nahi kar raha main tujhe.","Shuru se bata, kya hua tha?"
+sad,hindi,"Teri feelings matter karti hain, hard din mein bhi.",Aaj kya cheez itna mushkil bana rahi hai?
+sad,hindi,Kaash main thoda weight kam kar sakta tera.,Sabse mushkil hissa kya raha hai abhi tak?
+sad,hindi,Strong dikhne ki zaroorat nahi hai mere saamne.,Andar asal mein kya chal raha hai?
+sad,hindi,"Yeh bhaari feeling hai, par tu akela nahi uthayega ise.",Kis baat ne yeh sab trigger kiya?
+sad,hinglish,"Aye yaar kya hua, sab theek hai na? Baat kar mere se.",Kya kuch specific hua hai aaj?
+sad,hinglish,"It's okay to feel low sometimes, don't be so hard on yourself.",What's been on your mind lately?
+sad,hinglish,"Kuch bura hua kya? Main hoon yahan, no judgment at all.","Bata na, andar kya chal raha hai?"
+sad,hinglish,"Yaar rona ho toh ro, feel karo, I got you.",Kya cheez sabse zyada hurt kar rahi hai?
+sad,hinglish,"Main yahan hoon yaar, jab ready ho baat karna.",Dil mein kya chal raha hai bata?
+sad,hinglish,"Low feel karna theek hai, koi reason nahi chahiye.",Baat karna chahta hai abhi iske baare mein?
+sad,hinglish,Tu yeh sab akela carry nahi karna hai yaar.,Sabse zyada kya hurt kar raha hai?
+sad,hinglish,"Kuch din heavy hote hain, that's okay yaar.",Kuch recently change hua hai kya?
+sad,hinglish,"Jitna time lagta hai le, rush nahi karunga.",Kya specific cheez mann mein hai?
+sad,hinglish,"Yeh feel karna sahi hai, overreact nahi kar raha tu.",Kya hua tha jo aisa lag raha hai?
+sad,hinglish,"Jo bhi ho, judge bilkul nahi kar raha main.","Start se bata, kya hua exactly?"
+sad,hinglish,"Teri feelings important hain, even hard days pe.",Aaj kya itna tough bana raha hai sab?
+sad,hinglish,Kaash main kuch weight share kar sakta tera.,Sabse mushkil part kya tha ab tak?
+sad,hinglish,Brave dikhne ki zaroorat nahi hai yahan.,Andar actually kya chal raha hai?
+sad,hinglish,"Yeh heavy feeling hai, par tu alone nahi hai isme.",Kis baat ne yeh trigger kiya?
+angry,english,"Take a breath, I'm here and I hear you.",What exactly set this off today?
+angry,english,"That sounds really frustrating, your feelings make complete sense.",What happened that got you this worked up?
+angry,english,"It's okay to be angry, just don't let it eat you up inside.",Who or what triggered all this?
+angry,english,"Vent it all out, I'm not going anywhere.","So what actually happened, tell me everything?"
+angry,english,"Whoa okay, that's a lot, let's slow down and talk.","What exactly happened, start from the top?"
+angry,english,I can tell this really got under your skin.,Who or what set this off today?
+angry,english,"Your anger makes sense, let's talk it through.",What's the part that's bothering you most?
+angry,english,"Take a second, I'm here and not judging you.",What happened right before this started?
+angry,english,"It's fair to be mad about that, honestly.",Has this been building up for a while?
+angry,english,"I won't tell you to calm down, just talk to me.","What do you need right now, to vent or fix it?"
+angry,english,That sounds like it really crossed a line.,What exactly did they say or do?
+angry,english,You have every right to feel frustrated right now.,What's making this so hard to let go?
+angry,english,"Let's not bottle this up, tell me everything.",What's the situation that triggered all this?
+angry,english,"This anger is valid, I'm not dismissing it at all.",Who's involved in all of this?
+angry,english,"I hear how worked up you are, let's unpack it.",What happened that made you this upset?
+angry,hindi,"Yaar shaant ho ja thoda, bata mujhe kya hua poora.",Kisne itna gussa dilaya tujhe?
+angry,hindi,"Gussa aana theek hai, par apna dhyan rakh please.","Yeh sab shuru kaise hua, bata?"
+angry,hindi,"Jo bhi hua woh sach mein bura tha, teri feeling bilkul sahi hai.",Kya bola ya kiya gaya tere saath?
+angry,hindi,"Chhod mat andar andar, baat kar mere se khul ke.",Sabse zyada kis baat se gussa aaya?
+angry,hindi,Yaar itna sab sun ke samajh sakta hoon tera gussa.,"Shuru se bata, kya hua tha?"
+angry,hindi,Lagta hai yeh baat dil pe lag gayi hai tujhe.,Kisne ya kya cheez ne yeh shuru kiya?
+angry,hindi,"Tera gussa samajh mein aata hai, baat kar khul ke.",Sabse zyada kya bura laga tujhe?
+angry,hindi,"Ek second ruk, main hoon yahan, judge nahi kar raha.",Yeh sab se pehle kya hua tha?
+angry,hindi,"Gussa aana sahi hai is baat pe, honestly.",Kab se yeh sab build ho raha tha?
+angry,hindi,"Shaant hone ko nahi bolunga, bas bata mujhe.","Abhi kya chahiye tujhe, vent ya solution?"
+angry,hindi,Yeh toh line cross kar gaya sach mein.,Kya bola ya kiya unhone exactly?
+angry,hindi,Tera frustrated hona bilkul valid hai yaar.,Kis baat ko let go karna mushkil ho raha hai?
+angry,hindi,"Andar mat rakh, sab bata de mujhe.",Kya situation thi jisne yeh trigger kiya?
+angry,hindi,"Yeh gussa valid hai, dismiss nahi kar raha main.",Kaun involved hai is sab mein?
+angry,hindi,"Tu kitna upset hai samajh sakta hoon, bata poora.",Kya hua tha jo itna upset ho gaya?
+angry,hinglish,"Yaar I get it, it's genuinely frustrating. Bata kya hua?",Kab se yeh frustration build ho raha tha?
+angry,hinglish,"Shaant ho ja ek second, phir poora bata mujhe.","Theek hai, ab bata kya hua exactly?"
+angry,hinglish,"Teri feeling valid hai bhai, koi dismiss nahi kar raha tujhe.",Kisne yeh sab kiya ya bola tujhe?
+angry,hinglish,"Let it out yaar, main sun raha hoon poora time.",Yeh sab kab se chal raha tha?
+angry,hinglish,Yaar itna sun ke samajh aa raha hai tera gussa.,"Shuru se bata, kya hua tha exactly?"
+angry,hinglish,Lagta hai yeh baat dil pe lagi hai tujhe yaar.,Kisne shuru kiya yeh sab?
+angry,hinglish,"Tera gussa makes sense yaar, khul ke baat kar.",Sabse zyada kya bura laga?
+angry,hinglish,"Ek sec ruk, main hoon yahan, no judgment.",Yeh kaise shuru hua tha sab?
+angry,hinglish,Gussa aana fair hai is baat pe honestly.,Kab se build ho raha tha yeh sab?
+angry,hinglish,"Calm down nahi bolunga, bas bata mujhe poora.",Abhi vent karna hai ya solution chahiye?
+angry,hinglish,Yeh toh seriously line cross kar gaya yaar.,Kya kiya ya bola unhone exactly?
+angry,hinglish,Tera frustration bilkul valid hai bhai.,Kis baat ko chhodna mushkil lag raha hai?
+angry,hinglish,"Mat rakh andar, sab kuch bata de mujhe.",Kya situation thi jisne yeh trigger kiya?
+angry,hinglish,"Yeh gussa valid hai yaar, dismiss nahi kar raha.",Kaun involved hai is poore mamle mein?
+angry,hinglish,Tu kitna upset hai samajh sakta hoon main.,Kya hua jo itna upset feel ho raha hai?
+love,english,That warmth you're feeling right now? Hold onto it.,So who's putting that glow on your face?
+love,english,"Aww look at you all soft and happy, it's cute honestly.","Okay tell me, who's making you feel this way?"
+love,english,"Love looks really good on you, just saying.",What's the sweetest thing that happened recently?
+love,english,"That feeling is special, cherish every bit of it.",How did this whole thing start?
+love,english,"That kind of love is rare, hold onto it tight.",How did you two first meet?
+love,english,"You sound so soft talking about this, it's sweet.",What's the most special thing about them?
+love,english,This feeling you're describing sounds really beautiful.,How long have you felt this way?
+love,english,Love like that doesn't come around every day.,What made you realize you felt this way?
+love,english,"Your heart seems really full right now, I love that.",What's something small they do that you adore?
+love,english,"That's such a genuine feeling, cherish it fully.",What's your favorite memory with them so far?
+love,english,"You're glowing talking about this, it's lovely to see.",Does this person know how you feel?
+love,english,This warmth in your words is honestly beautiful.,What made today feel so special between you two?
+love,english,Sounds like you've found something really meaningful here.,How did this whole thing start?
+love,english,"That kind of affection is precious, don't take it lightly.",What's the sweetest thing they've done for you?
+love,english,You deserve all this love coming your way.,What's making your heart feel so full today?
+love,hindi,Yaar pyaar mein hona sabse acha feel hota hai na!,Kaun hai jisne yeh feeling di tujhe?
+love,hindi,"Dekh raha hoon, tera dil bahut khush hai aaj.",Kisne tera dil itna khush kar diya?
+love,hindi,Jab dil bhar aaye khushi se toh woh feeling sambhal ke rakhna.,Kya hua jo dil itna bhar gaya?
+love,hindi,"Teri aankhon mein jo chamak hai aaj, bahut acha lag raha hai.",Kiski yaad mein yeh chamak hai?
+love,hindi,"Yeh pyaar bahut rare hota hai, sambhal ke rakhna.",Tum dono pehli baar kaise mile the?
+love,hindi,"Itna soft sun ke acha lag raha hai, pyaara hai yeh.",Unme sabse special kya baat hai?
+love,hindi,Yeh feeling sach mein bahut beautiful lag rahi hai.,Kab se yeh feeling hai tujhe?
+love,hindi,Aisa pyaar har roz nahi milta yaar.,Kab realize hua tujhe yeh feeling?
+love,hindi,"Tera dil aaj bahut bhara lag raha hai, acha hai yeh.",Woh chhoti si kaunsi baat pasand hai tujhe?
+love,hindi,"Yeh genuine feeling hai, fully enjoy kar ise.",Sabse acha memory kya hai tum dono ka?
+love,hindi,"Tu glow kar raha hai yeh bolte hue, pyaara lag raha hai.",Pata hai unhe tu kaisa feel karta hai?
+love,hindi,Teri baaton mein yeh warmth bahut beautiful lag rahi hai.,Aaj kya special hua tum dono ke beech?
+love,hindi,Lagta hai tujhe kuch bahut meaningful mil gaya hai.,Yeh sab kaise shuru hua tha?
+love,hindi,"Yeh affection bahut precious hai, halke mein mat le.",Sabse sweet kya kiya hai unhone tere liye?
+love,hindi,Tu deserve karta hai itna saara pyaar.,Aaj dil itna bhara kyun hai tera?
+love,hinglish,"Yaar you're literally glowing right now, love suits you!",Kaun hai jo tujhe itna khush rakhta hai?
+love,hinglish,"Aww someone's feeling all soft today, cute hai yaar!","Bata na, kisne yeh feeling di?"
+love,hinglish,"Bhai yeh feeling bahut special hoti hai, enjoy karo fully.","Yeh sab kaise shuru hua, bata?"
+love,hinglish,"Dil khush hai toh sab khush, I love this for you!",Kisne tera din itna special bana diya?
+love,hinglish,"Yeh pyaar bahut rare hota hai yaar, hold onto it.",Tum dono first time kaise mile the?
+love,hinglish,"Itna soft sun ke acha lag raha hai, cute hai yeh.",Unme sabse special baat kya hai?
+love,hinglish,Yeh feeling sach mein bahut beautiful lag rahi hai yaar.,Kab se feel kar raha hai tu yeh?
+love,hinglish,"Aisa pyaar everyday nahi milta yaar, lucky ho tum.",Kab realize hua tujhe yeh feeling?
+love,hinglish,"Tera dil full hai aaj, I love this for you.",Woh kaunsi small si baat pasand hai tujhe?
+love,hinglish,"Yeh genuine feeling hai, fully enjoy karo ise.",Best memory kya hai tum dono ka?
+love,hinglish,"Tu glow kar raha hai abhi, pyaara lag raha hai sab.",Unhe pata hai tu kaisa feel karta hai?
+love,hinglish,"Teri baaton mein warmth hai, beautiful lag raha hai.",Aaj special kya hua tum dono ke beech?
+love,hinglish,Lagta hai kuch meaningful mil gaya hai tujhe.,Yeh sab kaise start hua tha?
+love,hinglish,"Yeh affection precious hai yaar, lightly mat le.",Sabse sweet gesture kya tha unka?
+love,hinglish,Tu deserve karta hai itna pyaar yaar.,Aaj dil itna full kyun hai tera?
+surprise,english,Wait what?! Okay I did NOT see that coming!,"Okay back up, how did this even happen?"
+surprise,english,"No way, are you serious right now?!","Wait seriously, what happened next?"
+surprise,english,"That's actually wild, tell me everything from the start.",Okay so what happened right before this?
+surprise,english,"Okay my jaw literally dropped, how did that even happen?",Were you expecting this at all?
+surprise,english,"Hold up, run that by me again, slowly!","Wait, did you know this was coming at all?"
+surprise,english,"Okay that's genuinely shocking, what happened next?",How did you even find out about this?
+surprise,english,I did not expect that twist at all!,Was anyone else surprised by this too?
+surprise,english,"Wait, that's actually insane, tell me more!",What was your first reaction when it happened?
+surprise,english,"Okay my mind is blown right now, seriously.",How long ago did all this happen?
+surprise,english,That came completely out of left field!,Did you see any signs before this happened?
+surprise,english,"Whoa, that's a lot to take in, keep going.",What happened right after you found out?
+surprise,english,"I'm shook honestly, that's such a twist.",Who else knows about this so far?
+surprise,english,"Okay that's wild, I need the full story now.",How are you feeling about it now?
+surprise,english,That's not something you hear every day!,What made this happen out of nowhere?
+surprise,english,"I genuinely gasped reading that, no joke.",Was this a good surprise or a tough one?
+surprise,hindi,Sach mein?! Yeh toh maine socha bhi nahi tha!,"Yeh sab kaise shuru hua, poora bata!"
+surprise,hindi,Arre yaar yeh kab hua?! Mujhe poora bata abhi!,Tujhe pehle se idea tha kuch?
+surprise,hindi,Yeh sun ke toh main bhi hairan reh gaya!,"Aage kya hua, batao na poora!"
+surprise,hindi,"Kya baat hai, itna unexpected tha yeh sab!",Tujhe bhi pehle se pata nahi tha kya?
+surprise,hindi,"Ruk zara, dobara bata, samajh nahi aaya!",Tujhe pehle se pata tha kuch iske baare mein?
+surprise,hindi,"Yeh toh sach mein shocking hai, aage kya hua?",Pata kaise chala tujhe iske baare mein?
+surprise,hindi,Yeh twist toh socha hi nahi tha maine!,Aur log bhi shocked hue iss baat se?
+surprise,hindi,"Yeh toh bilkul crazy hai, aur bata!",Pehli baar sunke kaisa laga tujhe?
+surprise,hindi,"Mera dimag ghoom gaya yeh sunke, sach mein.","Kab hua yeh sab, kitna time pehle?"
+surprise,hindi,Yeh toh bilkul achanak se hua kuch bhi nahi pata tha.,Koi sign tha kya pehle isska?
+surprise,hindi,"Itna sab sunke samajhna mushkil ho raha hai, aage bata.",Pata chalne ke baad kya hua?
+surprise,hindi,"Main sach mein shocked hoon, kya twist hai yeh.",Aur kisko pata hai iske baare mein abhi tak?
+surprise,hindi,"Yeh toh wild hai, poori kahani sunni hai mujhe.",Ab kaisa feel kar raha hai tu?
+surprise,hindi,"Yeh roz roz nahi sunte hum, sach mein!",Yeh achanak kaise ho gaya?
+surprise,hindi,Sach mein mera mooh khula reh gaya yeh padhke.,Yeh acha surprise tha ya tough wala?
+surprise,hinglish,"Bhai wait WHAT, yeh sach mein hua?!","Okay ab poora batao, kaise hua?"
+surprise,hinglish,"No way yaar, I'm genuinely shocked right now!",Tune expect kiya tha yeh sab?
+surprise,hinglish,"Arre yeh toh completely unexpected tha, full detail bata!","Iske baad kya hua, batao na!"
+surprise,hinglish,"Yaar mera dimag nahi chala iska, how did this happen?!",Kisko pata tha iske baare mein pehle se?
+surprise,hinglish,"Ruk zara, ek baar phir bata, samajh nahi aaya!",Pehle se pata tha kya tujhe iske baare mein?
+surprise,hinglish,"Yeh toh genuinely shocking hai yaar, aage kya hua?",Pata kaise chala iske baare mein?
+surprise,hinglish,"Yeh twist socha hi nahi tha bhai, kya baat hai!",Auro ko bhi shock laga iss baat se?
+surprise,hinglish,"Yaar yeh toh full crazy hai, aur batao!",First reaction kya tha jab pata chala?
+surprise,hinglish,"Mera mind blow ho gaya yaar, sach mein.",Kitna time pehle yeh sab hua tha?
+surprise,hinglish,Yeh toh bilkul out of nowhere hua hai.,Koi signs the kya pehle se isske?
+surprise,hinglish,"Itna sab process karna mushkil hai, aage bata.",Pata chalne ke baad kya hua tha?
+surprise,hinglish,"Main genuinely shook hoon yaar, kya twist hai!",Kisko abhi tak pata hai iske baare mein?
+surprise,hinglish,"Yeh wild hai bhai, poori story chahiye mujhe.",Ab kaisa feel ho raha hai tujhe?
+surprise,hinglish,"Yeh toh roz roz nahi hota, sach mein!",Yeh achanak kaise ho gaya yaar?
+surprise,hinglish,"Sach mein gasp nikal gaya yeh padhke, no joke.",Yeh acha surprise tha ya thoda tough?
+hate,english,"That sounds like it really got to you, and I understand why.",What exactly happened that bothered you so much?
+hate,english,"Some things and people just aren't worth your energy, honestly.",What did they do that crossed the line?
+hate,english,"That feeling is valid, you don't have to pretend it's fine.",What's been bothering you about this the most?
+hate,english,"Let it out, I'm not here to tell you to calm down.",So what actually happened between you two?
+hate,english,"That kind of behavior would frustrate anyone, honestly.",What did they actually do to you?
+hate,english,You don't need to justify why this bothers you.,Has this happened before with them?
+hate,english,"It's exhausting dealing with stuff like that, I get it.",How long has this been going on?
+hate,english,That reaction makes total sense given what happened.,What's the part that bothers you most?
+hate,english,"Some people just bring out the worst feelings, fair enough.",Do you want to talk it through or just vent?
+hate,english,I won't tell you you're wrong to feel that way.,What happened that pushed you to this point?
+hate,english,"That sounds genuinely draining, no wonder you feel this way.",Is this something you deal with often?
+hate,english,"You're allowed to dislike something this strongly, it's okay.",What's making it hard to let this go?
+hate,english,"That kind of thing would bother anyone, truly.",Do you want to talk about what happened?
+hate,english,"I hear the intensity in this, and it makes sense.",What's the situation that caused all this?
+hate,english,You don't owe anyone patience for stuff like that.,What exactly happened between you two?
+hate,hindi,Yaar jo cheez itna bura lagaye usse door rehna hi sahi hai.,Kya hua tha jo itna bura laga?
+hate,hindi,"Teri feeling bilkul sahi hai, koi zaroorat nahi kuch pretend karne ki.",Kaunsi baat sabse zyada chubhi tujhe?
+hate,hindi,Kuch cheezein aur kuch log sach mein bahut drain kar dete hain.,Kisne ya kya cheez tujhe itna drain kiya?
+hate,hindi,"Mat rok khud ko, bata mujhe kya hua poora.","Shuru se bata, kya hua tha exactly?"
+hate,hindi,"Aisa behavior kisi ko bhi gussa dilayega, samajh sakta hoon.",Unhone exactly kya kiya tere saath?
+hate,hindi,Tujhe justify karne ki zaroorat nahi hai yeh feeling.,Pehle bhi hua hai kya yeh unke saath?
+hate,hindi,"Aisi cheezon se thakaan hoti hai, samajh sakta hoon.",Kab se yeh chal raha hai sab?
+hate,hindi,Yeh reaction bilkul sahi hai jo hua usske baad.,Sabse zyada kya bura laga tujhe?
+hate,hindi,"Kuch log sach mein worst feelings la dete hain, fair hai.",Baat karni hai ya bas vent karna hai?
+hate,hindi,"Tu galat nahi hai yeh feel karne mein, bilkul sahi hai.",Kya hua jo tujhe yahan tak laaya?
+hate,hindi,"Yeh sach mein draining lagta hoga, samajh sakta hoon.",Yeh aksar hota hai kya tere saath?
+hate,hindi,Tujhe haq hai kisi cheez ko itna dislike karne ka.,Kya cheez let go karna mushkil bana rahi hai?
+hate,hindi,"Aisi baat kisi ko bhi pareshan kar degi, sach mein.",Baat karega kya hua tha?
+hate,hindi,"Yeh intensity samajh sakta hoon, makes sense hai.",Kya situation thi jisne yeh sab kiya?
+hate,hindi,Tujhe kisi ke liye patience rakhne ki zaroorat nahi hai.,Tum dono ke beech exactly kya hua?
+hate,hinglish,"Yaar I get it, kuch cheezein genuinely bahut buri lagti hain.","Bata na, kya hua tha exactly?"
+hate,hinglish,"Apni feeling ko valid feel karne de, it's okay yaar.",Kaunsi baat tujhe sabse zyada irritate kar rahi hai?
+hate,hinglish,"Sach mein bura tha woh, tu overreact nahi kar raha.",Unhone kya kaha ya kiya tere saath?
+hate,hinglish,Jo tujhe drain kare usse life mein space mat de yaar.,Yeh kab se chal raha tha tere saath?
+hate,hinglish,Aisa behavior kisi ko bhi frustrate karega yaar.,Unhone exactly kya kiya tujhe?
+hate,hinglish,Tujhe justify karne ki zaroorat nahi hai feeling ki.,Pehle bhi hua hai kya yeh?
+hate,hinglish,"Aisi cheezein genuinely draining hoti hain, samajh sakta hoon.",Kab se chal raha hai yeh sab?
+hate,hinglish,"Yeh reaction totally makes sense yaar, fair hai.",Sabse zyada kya bother kar raha hai?
+hate,hinglish,"Kuch log worst feelings la dete hain, that's fair.",Talk karna hai ya bas vent karna hai?
+hate,hinglish,"Tu wrong nahi hai yeh feel karne mein, bilkul valid hai.",Kya hua jo yahan tak pohcha mamla?
+hate,hinglish,"Yeh genuinely draining hai yaar, samajh sakta hoon.",Yeh often hota hai kya tere saath?
+hate,hinglish,"Tujhe haq hai itna dislike karne ka, it's okay yaar.",Let go karna kyun mushkil lag raha hai?
+hate,hinglish,Aisi baat kisi ko bhi bother kar degi sach mein.,Baat karna chahta hai kya hua tha?
+hate,hinglish,"Yeh intensity samajh sakta hoon yaar, fair hai.",Kya situation thi iske peeche?
+hate,hinglish,Kisi ke liye patience rakhne ki zaroorat nahi hai yaar.,Tum dono ke beech kya hua exactly?
+enthusiasm,english,"Okay that energy is incredible, let's gooo!",So what's the big plan you're working on?
+enthusiasm,english,You're so fired up right now and I am absolutely here for it!,What's got you this excited today?
+enthusiasm,english,"Channel that hype into something big, seriously!",What are you planning to do with this energy?
+enthusiasm,english,"This excitement you have is genuinely contagious, keep going!",What's next on your list right now?
+enthusiasm,english,This is the kind of energy that makes things happen!,What's the first step you're taking?
+enthusiasm,english,"You're so ready for this, I can feel it!",What's got you this fired up today?
+enthusiasm,english,Let's turn this excitement into action right now!,"What's the plan, where do we start?"
+enthusiasm,english,"I love this energy, it's absolutely electric!",What's the big thing you're working towards?
+enthusiasm,english,This hype is exactly what big things are made of!,What's the goal you're chasing right now?
+enthusiasm,english,"You sound unstoppable right now, keep that momentum!",What's next on your list today?
+enthusiasm,english,This is the energy that gets dreams done!,What's the first move you're making?
+enthusiasm,english,"I'm so here for this excitement, let's go!",What are you most excited to start with?
+enthusiasm,english,This kind of fire doesn't come around often!,What sparked all this motivation today?
+enthusiasm,english,Your energy is honestly inspiring right now!,What's the dream you're chasing here?
+enthusiasm,english,Let's ride this wave while it's hot!,What's the very next step for you?
+enthusiasm,hindi,"Yaar teri energy toh aaj full on hai, mast lag raha hai!",Aaj kya bada plan hai tera?
+enthusiasm,hindi,"Itna josh dekh ke dil khush ho gaya, chal kar dikhao!",Sabse pehle kya karne wala hai tu?
+enthusiasm,hindi,"Yeh wala excitement mat jaane dena, isko kaam mein laga do!",Kis kaam ke liye itna josh hai?
+enthusiasm,hindi,Bhai aaj toh tu kuch bhi kar sakta hai is energy mein!,"Bata na, kya karne ka plan hai?"
+enthusiasm,hindi,Yeh energy hi hai jisse bade kaam hote hain!,Sabse pehla step kya lene wala hai tu?
+enthusiasm,hindi,Tu poori taiyaar lag raha hai is sab ke liye!,Aaj kis baat ne itna fire laga diya?
+enthusiasm,hindi,Yeh excitement ko abhi action mein badal de!,"Plan kya hai, kahan se shuru karega?"
+enthusiasm,hindi,Yeh energy sach mein electric lag rahi hai!,Bada goal kya hai jiske liye kaam kar raha hai?
+enthusiasm,hindi,Yeh hype hi bade kaam karwata hai yaar!,Abhi kis goal ke peeche hai tu?
+enthusiasm,hindi,"Tu unstoppable lag raha hai abhi, momentum rakh!",Aaj ka next step kya hai?
+enthusiasm,hindi,Yeh energy hi dreams complete karwati hai!,Sabse pehla move kya lega tu?
+enthusiasm,hindi,"Main is excitement ke saath hoon, chalo shuru karein!",Sabse pehle kya start karna chahta hai?
+enthusiasm,hindi,Aisi fire roz roz nahi dikhti tujh mein!,Aaj kis baat ne itna motivate kiya?
+enthusiasm,hindi,Teri energy sach mein inspiring lag rahi hai!,Kaunsa dream chase kar raha hai tu abhi?
+enthusiasm,hindi,Is lehar pe abhi sawaar ho jao jab tak garam hai!,Next step kya hai tera bilkul abhi?
+enthusiasm,hinglish,"Bhai yeh energy toh next level hai, let's gooo yaar!",Aaj kis mission pe nikla hai tu?
+enthusiasm,hinglish,"Itna hype tha toh abhi kuch bada karo, perfect time hai!",Sabse pehle kya start karega?
+enthusiasm,hinglish,Yaar tera excitement dekh ke mujhe bhi motivation mil gayi!,Kya plan hai jo itna excite kar raha hai?
+enthusiasm,hinglish,"Full josh mein hai tu aaj, I love this version of you!","Bata na, aaj kis baat ka josh hai?"
+enthusiasm,hinglish,Yeh energy hi hai jisse big things hote hain!,Sabse pehla step kya lega tu?
+enthusiasm,hinglish,Tu fully ready lag raha hai is sab ke liye!,Aaj kis baat ne itna fire laga diya?
+enthusiasm,hinglish,Yeh excitement ko action mein convert kar de abhi!,"Plan kya hai, kahan se start karega?"
+enthusiasm,hinglish,Yeh energy sach mein electric hai yaar!,Bada goal kya hai is sab ke peeche?
+enthusiasm,hinglish,Yeh hype hi bade kaam karwata hai bhai!,Abhi kis goal ke peeche hai tu?
+enthusiasm,hinglish,"Tu unstoppable lag raha hai, momentum maintain rakh!",Aaj ka next move kya hai?
+enthusiasm,hinglish,Yeh energy hi dreams ko reality banati hai!,Sabse pehla move kya hoga tera?
+enthusiasm,hinglish,"Main is excitement mein fully hoon, let's go!",Sabse pehle kya start karega?
+enthusiasm,hinglish,Aisi fire roz roz nahi aati yaar!,Aaj kya motivate kar gaya tujhe itna?
+enthusiasm,hinglish,Teri energy genuinely inspiring lag rahi hai!,Kaunsa dream chase kar raha hai abhi?
+enthusiasm,hinglish,Is wave pe abhi sawaar ho ja jab tak hot hai!,Next step kya hai bilkul abhi ka?

@@ -114,7 +114,7 @@ if __name__ == "__main__":
         context_text = get_context()
         result = analyze(context_text)
         language = detect_language(user_input)
-        reply = get_response(result["emotion"],language)
+        response , follow_up = get_response(result["emotion"],language)
 
 
         print(f"Emotion   : {result['emotion']}")
@@ -123,7 +123,9 @@ if __name__ == "__main__":
         print("History :",history)
         print("Context : ",context_text)
         print("Langauge : ",language)
-        print("Lucy : ",reply)
+        print("Lucy : ",response)
+        print()
+        print(follow_up)
         
 
 
