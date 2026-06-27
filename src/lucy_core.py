@@ -4,6 +4,7 @@ from collections import Counter
 import pandas as pd
 from response_engine import get_response
 from language_detector import detect_language
+from gemini_client import generate_reply
 
 model = joblib.load("models/lucy_pipeline_v0_2.pkl")
 df_emoji = pd.read_csv("dataset/emoji_emotions_final.csv")
@@ -113,8 +114,15 @@ if __name__ == "__main__":
         update_history(user_input)
         context_text = get_context()
         result = analyze(context_text)
+        emotion = result["emotion"]
         language = detect_language(user_input)
-        response , follow_up = get_response(result["emotion"],language)
+       
+        try :
+            response = generate_reply(result["emotion"],language,context_text)
+        except Exception :
+            print("Using The FallBack")
+            response, follow_up = get_response(emotion,language)[0]
+
 
 
         print(f"Emotion   : {result['emotion']}")
@@ -124,8 +132,8 @@ if __name__ == "__main__":
         print("Context : ",context_text)
         print("Langauge : ",language)
         print("Lucy : ",response)
-        print()
-        print(follow_up)
+        # print()
+        # print(follow_up)
         
 
 
