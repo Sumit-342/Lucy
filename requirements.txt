@@ -6,3 +6,4 @@ matplotlib
 emoji
 dotenv
 google-genai
+openai

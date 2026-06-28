@@ -119,11 +119,12 @@ if __name__ == "__main__":
        
         try :
             response = generate_reply(result["emotion"],language,context_text)
-        except Exception :
-            print("Using The FallBack")
-            response, follow_up = get_response(emotion,language)[0]
+            follow_up = None
+        except Exception as e :
+            print(f"\n Gemini Error : {e}")
+            print("\n Gemini Unavaliable. Using local FallBack")
 
-
+            response,follow_up = get_response(emotion,language)
 
         print(f"Emotion   : {result['emotion']}")
         print(f"Confidence: {result['confidence']}")
@@ -132,9 +133,11 @@ if __name__ == "__main__":
         print("Context : ",context_text)
         print("Langauge : ",language)
         print("Lucy : ",response)
-        # print()
-        # print(follow_up)
-        
+
+        if follow_up :
+             print()
+             print(follow_up)
+            
 
 
       
