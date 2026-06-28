@@ -5,6 +5,7 @@ import pandas as pd
 from response_engine import get_response
 from language_detector import detect_language
 from gemini_client import generate_reply
+from emotion_engine import detect_emotion
 
 model = joblib.load("models/lucy_pipeline_v0_2.pkl")
 df_emoji = pd.read_csv("dataset/emoji_emotions_final.csv")
@@ -113,12 +114,11 @@ if __name__ == "__main__":
         
         update_history(user_input)
         context_text = get_context()
-        result = analyze(context_text)
-        emotion = result["emotion"]
+        emotion = detect_emotion(context_text)
         language = detect_language(user_input)
        
         try :
-            response = generate_reply(result["emotion"],language,context_text)
+            response = generate_reply(emotion,language,context_text)
             follow_up = None
         except Exception as e :
             print(f"\n Gemini Error : {e}")
@@ -126,9 +126,7 @@ if __name__ == "__main__":
 
             response,follow_up = get_response(emotion,language)
 
-        print(f"Emotion   : {result['emotion']}")
-        print(f"Confidence: {result['confidence']}")
-        print(f"Mode : {result['mode']}")
+        print(f"Emotion   : {emotion}")
         print("History :",history)
         print("Context : ",context_text)
         print("Langauge : ",language)

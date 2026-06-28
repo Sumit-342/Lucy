@@ -366,6 +366,116 @@ Instead of simply responding to emotions, Lucy now encourages users to continue 
 
 ---
 
+## 🚀 Version v0.7 (LLM Conversation Engine) 🤖💙
+
+🌟 Major Breakthrough  
+This version marks the biggest milestone in Lucy's journey.  
+Lucy is no longer limited to predefined responses or rule-based conversations.  
+For the first time, Lucy is powered by Large Language Models (LLMs), allowing her to hold natural, context-aware, emotionally adaptive conversations while preserving her caring personality.  
+This version transforms Lucy from an Emotion Detection Project into an AI Companion System.  
+
+---
+
+🚀 Key Features
+
+- 🤖 Gemini-powered conversation engine  
+- 🧠 Dedicated LLM-based emotion detection using Qwen3-Next  
+- 💬 Context-aware conversations  
+- ❤️ Emotion-aware responses  
+- 🌍 English, Hindi & Hinglish support  
+- 🛡️ Automatic fallback to local response engine if Gemini is unavailable  
+- 🧩 Modular architecture with separate emotion and response engines  
+
+---
+
+🧠 How It Works
+
+User Message  
+      │  
+      ▼  
+Conversation Context  
+      │  
+      ▼  
+Qwen3-Next Emotion Engine  
+      │  
+      ▼  
+Detected Emotion  
+      │  
+      ▼  
+Gemini Conversation Engine  
+      │  
+      ▼  
+Lucy Response  
+
+If Gemini becomes unavailable:  
+
+Detected Emotion  
+      │  
+      ▼  
+Local Response Engine  
+      │  
+      ▼  
+Fallback Response  
+
+---
+
+⚙️ System Architecture
+
+- Memory Layer (last 3 messages)  
+- Context Builder  
+- Qwen3-Next Emotion Engine  
+- Gemini Conversation Engine  
+- Local Response Engine (Fallback)  
+- Language Detection Module  
+
+---
+
+🎯 Improvements
+
+- Natural human-like conversations  
+- Emotion-aware replies  
+- Better use of conversation history  
+- More personalized follow-up questions  
+- Handles English, Hindi and Hinglish naturally  
+- More maintainable modular codebase  
+- Cloud-based emotion understanding without heavy local models  
+
+---
+
+🛡️ Reliability
+
+Lucy is designed to continue the conversation even if the LLM becomes unavailable.  
+If Gemini fails for any reason:  
+- Local response engine automatically takes over  
+- Conversation never completely stops  
+- User still receives an emotionally appropriate response  
+
+---
+
+⚠️ Current Limitations
+
+- Long-term memory is not implemented yet  
+- Context is currently limited to recent conversation  
+- Emotion detection still depends on external API availability  
+- Complex emotions can still be ambiguous  
+- Personality will continue to improve in future versions  
+
+---
+
+🧠 Key Insight
+
+This version changes how Lucy thinks, not just what Lucy says.  
+
+Instead of relying on predefined responses, Lucy now combines:  
+- Context  
+- Emotion  
+- Conversation history  
+- LLM reasoning  
+
+to generate responses dynamically while maintaining a consistent companion-like personality.
+
+---
+
 ## 🛠️ Technologies Used
 - Python  
 - Scikit-learn  
