@@ -1,0 +1,173 @@
+Lucy Conversation Modes (v0.8)
+
+Purpose
+
+Before generating a response, Lucy first identifies the user's conversation mode.
+
+The conversation mode decides how Lucy should respond, while emotion helps determine the emotional tone of that response.
+
+---
+
+Mode Priority
+
+1. Crisis
+2. Vent
+3. Comfort
+4. Celebrate
+5. Reflect/Love
+6. Motivate
+7. Explain
+8. Casual Chat (Fallback)
+
+---
+
+1. Crisis
+
+Purpose
+
+Detect serious emotional distress and switch to a safe response.
+
+Typical Examples
+
+- I don't want to live anymore.
+- What's even the point of all this?
+- I don't think this life is worth living.
+- Jeene ka koi matlab nahi lagta.
+- Bas sab khatam ho jaye.
+
+---
+
+2. Comfort
+
+Purpose
+
+Support users who are sad, stressed, lonely, exhausted or emotionally hurt.
+
+Typical Examples
+
+- I feel lonely.
+- I don't have any friends.
+- I just feel like a loser.
+- Aaj mood bahut off hai.
+- Mujhse nahi hoga.
+- Mera breakup ho gaya.
+- Bahut stress hai.
+- Jukham ho gaya hai.
+
+---
+
+3. Celebrate
+
+Purpose
+
+Celebrate achievements, good news, excitement and relief together with the user.
+
+Typical Examples
+
+- I got selected.
+- I passed.
+- Finally project run ho gaya.
+- Hurrayyyyy!!
+- Yayyyyy!!
+- Finally done!
+- Today was amazing.
+- Got my first internship.
+
+---
+
+4. Vent
+
+Purpose
+
+Allow users to express anger and frustration without immediately trying to solve the problem.
+
+Typical Examples
+
+- Mujhe bahut gussa aa raha hai.
+- This is so frustrating.
+- Kya bakwaas hai.
+- Sab bakwaas hai.
+- Tang aa gaya hu.
+- Pak gaya hu.
+- Internet phir chala gaya.
+
+---
+
+5. Explain
+
+Purpose
+
+Answer informational and educational questions.
+
+Typical Examples
+
+- What is AI?
+- Explain recursion.
+- Difference between Java and Python.
+- GPU kya hota hai?
+- Kaise kaam karta hai?
+
+---
+
+6. Motivate
+
+Purpose
+
+Encourage users to start or continue working toward a goal.
+
+Typical Examples
+
+- Motivate me.
+- Push me.
+- I want to start.
+- Mujhe padhna hai.
+- DSA restart karni hai.
+- Lucy pe kaam karna hai.
+
+---
+
+7. Reflect / Love
+
+Purpose
+
+Handle conversations about relationships, gratitude and emotional bonding.
+
+Typical Examples
+
+- I love my parents.
+- I miss my friend.
+- I have a crush.
+- Thank you.
+- I'm grateful.
+- Relationship advice chahiye.
+
+---
+
+8. Casual Chat
+
+Purpose
+
+Handle greetings and normal day-to-day conversations.
+
+Typical Examples
+
+- Hi
+- Hello
+- Good morning
+- What's up?
+- Aur batao.
+- Kaise ho?
+- Tell me a joke.
+
+---
+
+Future Versions
+
+Planned upgrades:
+
+- AI Intent Detection
+- Multi-mode detection
+- Conversation continuity
+- Teasing / Playful mode
+- Memory-aware mode selection
+- Confidence scoring
