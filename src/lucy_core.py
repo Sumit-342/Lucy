@@ -101,44 +101,125 @@ def analyze(text):                                      # output wrapper
 
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
     
-    while True :
+#     while True :
+#         user_input = input("\nYou: ")
+#         if user_input.lower() == "exit" :
+#             print("Lucy: Goodbye 👋👋")
+#             break
+
+#         if not user_input.strip():  
+#             print("Lucy: Please say something")
+#             continue
+        
+#         update_history(user_input)
+#         context_text = get_context()
+#         emotion = detect_emotion(context_text)
+#         mode = detect_mode(user_input)
+#         language = detect_language(user_input)
+        
+       
+#         try :
+#             response = generate_reply(emotion,language,context_text)
+#             follow_up = None
+#         except Exception as e :
+#             print(f"\n Gemini Error : {e}")
+#             print("\n Gemini Unavaliable. Using local FallBack")
+
+#             response,follow_up = get_response(emotion,language)
+
+#         print(f"Emotion   : {emotion}")
+#         print("History :",history)
+#         print("Context : ",context_text)
+#         print(f"Mode : {mode}")
+#         print("Langauge : ",language)
+#         print("Lucy : ",response)
+
+#         if follow_up :
+#              print()
+#              print(follow_up)
+
+
+
+
+DEBUG = True
+
+if __name__ == "__main__":
+
+    while True:
+
         user_input = input("\nYou: ")
-        if user_input.lower() == "exit" :
+
+        if user_input.lower() == "exit":
             print("Lucy: Goodbye 👋👋")
             break
 
-        if not user_input.strip():  
-            print("Lucy: Please say something")
+        if not user_input.strip():
+            print("Lucy: Please say something.")
             continue
-        
+
+        # -----------------------------
+        # Lucy Pipeline
+        # -----------------------------
         update_history(user_input)
+
         context_text = get_context()
         emotion = detect_emotion(context_text)
         mode = detect_mode(user_input)
         language = detect_language(user_input)
-        
-       
-        try :
-            response = generate_reply(emotion,language,context_text)
+
+        # -----------------------------
+        # Response Generation
+        # -----------------------------
+        try:
+            response = generate_reply(
+                emotion,
+                language,
+                context_text
+            )
             follow_up = None
-        except Exception as e :
-            print(f"\n Gemini Error : {e}")
-            print("\n Gemini Unavaliable. Using local FallBack")
 
-            response,follow_up = get_response(emotion,language)
+        except Exception as e:
+            print(f"\nGemini Error: {e}")
+            print("Gemini unavailable. Using Local Fallback...\n")
 
-        print(f"Emotion   : {emotion}")
-        print("History :",history)
-        print("Context : ",context_text)
-        print(f"Mode : {mode}")
-        print("Langauge : ",language)
-        print("Lucy : ",response)
+            response, follow_up = get_response(
+                emotion,
+                language
+            )
 
-        if follow_up :
-             print()
-             print(follow_up)
+        # -----------------------------
+        # Debug Information
+        # -----------------------------
+        if DEBUG:
+
+            print("\n" + "=" * 60)
+            print("                     LUCY DEBUG")
+            print("=" * 60)
+
+            print(f"Language : {language}")
+            print(f"Emotion  : {emotion}")
+            print(f"Mode     : {mode}")
+
+            print("\nHistory:")
+            for i, msg in enumerate(history, start=1):
+                print(f"{i}. {msg}")
+
+            print("\nContext:")
+            print(context_text)
+
+            print("=" * 60)
+
+        # -----------------------------
+        # Lucy Response
+        # -----------------------------
+        print("\nLucy:")
+        print(response)
+
+        if follow_up:
+            print()
+            print(follow_up)
             
 
 

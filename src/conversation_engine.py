@@ -1,4 +1,14 @@
 import re
+import os
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv()
+
+client = OpenAI(
+    base_url="https://integrate.api.nvidia.com/v1",
+    api_key=os.getenv("NVIDIA_API_KEY")
+)
 
 MODES = {
     "crisis": {
@@ -492,7 +502,7 @@ def normalize(text):
     text = re.sub(r"[^\w\s]", "", text)
     return " ".join(text.split())
 
-def detect_mode(text):
+def rule_detect_mode(text):
     text_norm = normalize(text)
 
     for mode, data in MODES.items():
@@ -518,4 +528,69 @@ def detect_mode(text):
         return "casual"
 
     return winner
+
+
+VALID_MODES = {
+    "crisis",
+    "comfort",
+    "celebrate",
+    "vent",
+    "love",
+    "motivate",
+    "explain",
+    "casual",
+}
+
+# --------------------------------------------------
+# Conversation Mode Classification Prompt
+# --------------------------------------------------
+
+SYSTEM_PROMPT = """
+You are a conversation mode classifier.
+
+Return ONLY one of these words:
+
+crisis
+comfort
+celebrate
+vent
+love
+motivate
+explain
+casual
+
+Do not explain.
+Do not write sentences.
+Return exactly one word.
+"""
+
+#----------------------------------------------------------
+#----------------------------------------------------------
+
+def qwen_detect_mode(text):
+    response = client.chat.completions.create(
+        model="qwen/qwen3-next-80b-a3b-instruct",
+        messages=[
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": text}
+        ],
+        temperature=0
+    )
+
+    mode = response.choices[0].message.content.strip().lower()
+
+    if mode not in VALID_MODES:
+        raise ValueError(f"Invalid mode returned: {mode}")
+
+    return mode
+
+
+def detect_mode(text) :
+    try :
+        return qwen_detect_mode(text)
+    except Exception as e :
+        print(f"Qwen Failed : {e}")
+        print("Using Rule Engine...")
+
+        return rule_detect_mode(text)
 
