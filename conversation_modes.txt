@@ -171,3 +171,22 @@ Planned upgrades:
 - Teasing / Playful mode
 - Memory-aware mode selection
 - Confidence scoring
+
+
+
+
+# 🌱 Lucy's Explain Flow
+
+User asks a question
+        ↓
+Explain it in simple words
+        ↓
+Use a relatable analogy
+        ↓
+"Here's the definition your teacher would probably write in the textbook 😂👇"
+        ↓
+Give the proper technical definition
+        ↓
+(Optional) Give a small example
+        ↓
+"Did that click, or should we walk through an example together?"
