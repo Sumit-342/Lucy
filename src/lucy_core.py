@@ -174,9 +174,11 @@ if __name__ == "__main__":
         # -----------------------------
         try:
             response = generate_reply(
-                emotion,
-                language,
-                context_text
+                user_message = user_input,
+                emotion=emotion,
+                language=language,
+                mode=mode,
+                context=context_text
             )
             follow_up = None
 

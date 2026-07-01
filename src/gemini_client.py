@@ -1,7 +1,9 @@
 import os
 from dotenv import load_dotenv
 from google import genai
-from prompt import SYSTEM_PROMPT
+from prompts.LUCY_PERSONALITY_PROMPT import SYSTEM_PROMPT
+from prompts.LUCY_PERSONALITY_PROMPT import LUCY_PERSONALITY_PROMPT
+from prompts.MODE_PROMPT import get_mode_prompt
 
 # Load .env file
 load_dotenv()
@@ -13,10 +15,16 @@ api_key = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=api_key)
 
 
-def generate_reply(user_message,emotion,context):
+def generate_reply(user_message,emotion,language,mode,context):
+    mode_prompt = get_mode_prompt(mode)
 
     full_prompt = f"""
+
+{LUCY_PERSONALITY_PROMPT}
+
 {SYSTEM_PROMPT}
+
+{mode_prompt}
 
 Detected Emotion:
 {emotion}
