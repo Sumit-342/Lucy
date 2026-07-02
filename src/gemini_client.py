@@ -4,6 +4,7 @@ from google import genai
 from prompts.LUCY_PERSONALITY_PROMPT import SYSTEM_PROMPT
 from prompts.LUCY_PERSONALITY_PROMPT import LUCY_PERSONALITY_PROMPT
 from prompts.MODE_PROMPT import get_mode_prompt
+from datetime import datetime
 
 # Load .env file
 load_dotenv()
@@ -18,6 +19,26 @@ client = genai.Client(api_key=api_key)
 def generate_reply(user_message,emotion,language,mode,context):
     mode_prompt = get_mode_prompt(mode)
 
+    now = datetime.now()
+
+    hour = now.hour
+
+    if 5 <= hour < 12:
+        time_period = "Morning"
+    elif 12 <= hour < 17:
+        time_period = "Afternoon"
+    elif 17 <= hour < 21:
+        time_period = "Evening"
+    else:
+        time_period = "Night"
+
+    current_context = f"""
+    Current Date: {now.strftime("%d %B %Y")}
+    Current Day: {now.strftime("%A")}
+    Current Time: {now.strftime("%I:%M %p")}
+    Time Period: {time_period}
+    """
+
     full_prompt = f"""
 
 {LUCY_PERSONALITY_PROMPT}
@@ -25,6 +46,9 @@ def generate_reply(user_message,emotion,language,mode,context):
 {SYSTEM_PROMPT}
 
 {mode_prompt}
+
+Current Context :
+{current_context}
 
 Detected Emotion:
 {emotion}
