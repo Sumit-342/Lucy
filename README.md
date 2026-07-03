@@ -668,3 +668,5 @@ it’s getting closer to feeling human. 🤍
 
 > **"People may forget what Lucy said.  
 > But they should never forget how Lucy made them feel."**
+
+

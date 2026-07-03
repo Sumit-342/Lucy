@@ -1,5 +1,6 @@
 import joblib
 import emoji
+import time
 from collections import Counter
 import pandas as pd
 from response_engine import get_response
@@ -100,49 +101,6 @@ def analyze(text):                                      # output wrapper
     }
 
 
-
-# if __name__ == "__main__":
-    
-#     while True :
-#         user_input = input("\nYou: ")
-#         if user_input.lower() == "exit" :
-#             print("Lucy: Goodbye 👋👋")
-#             break
-
-#         if not user_input.strip():  
-#             print("Lucy: Please say something")
-#             continue
-        
-#         update_history(user_input)
-#         context_text = get_context()
-#         emotion = detect_emotion(context_text)
-#         mode = detect_mode(user_input)
-#         language = detect_language(user_input)
-        
-       
-#         try :
-#             response = generate_reply(emotion,language,context_text)
-#             follow_up = None
-#         except Exception as e :
-#             print(f"\n Gemini Error : {e}")
-#             print("\n Gemini Unavaliable. Using local FallBack")
-
-#             response,follow_up = get_response(emotion,language)
-
-#         print(f"Emotion   : {emotion}")
-#         print("History :",history)
-#         print("Context : ",context_text)
-#         print(f"Mode : {mode}")
-#         print("Langauge : ",language)
-#         print("Lucy : ",response)
-
-#         if follow_up :
-#              print()
-#              print(follow_up)
-
-
-
-
 DEBUG = True
 
 if __name__ == "__main__":
@@ -170,17 +128,31 @@ if __name__ == "__main__":
         # -----------------------------
         # Lucy Pipeline
         # -----------------------------
+        pipeline_start = time.perf_counter()
+
         update_history(user_input)
 
+        context_start = time.perf_counter()
         context_text = get_context()
+        context_time = time.perf_counter() - context_start
+
+        emotion_start = time.perf_counter()
         emotion = detect_emotion(context_text)
+        emotion_time = time.perf_counter() - emotion_start
+
+        mode_start = time.perf_counter()
         mode = detect_mode(user_input)
+        mode_time = time.perf_counter() - mode_start
+
+        language_start = time.perf_counter()
         language = detect_language(user_input)
+        language_time = time.perf_counter() - language_start
 
         # -----------------------------
         # Response Generation
         # -----------------------------
         try:
+            reply_start = time.perf_counter()
             response = generate_reply(
                 user_message = user_input,
                 emotion=emotion,
@@ -188,17 +160,22 @@ if __name__ == "__main__":
                 mode=mode,
                 context=context_text
             )
+            reply_time = time.perf_counter() - reply_start
+
             follow_up = None
 
         except Exception as e:
             print(f"\nGemini Error: {e}")
             print("Gemini unavailable. Using Local Fallback...\n")
 
+            reply_time = 0.0
+
             response, follow_up = get_response(
                 emotion,
                 language
             )
 
+        total_time = time.perf_counter() - pipeline_start
         # -----------------------------
         # Debug Information
         # -----------------------------
@@ -206,7 +183,7 @@ if __name__ == "__main__":
 
             print("\n" + "=" * 60)
             print("                     LUCY DEBUG")
-            print("=" * 60)
+            
 
             print(f"Language : {language}")
             print(f"Emotion  : {emotion}")
@@ -218,6 +195,20 @@ if __name__ == "__main__":
 
             print("\nContext:")
             print(context_text)
+
+            print("\n" + "=" * 60)
+            print("                  PERFORMANCE")
+            print("=" * 60)
+
+            print(f"Context Build      : {context_time:.2f} s")
+            print(f"Emotion Detection  : {emotion_time:.2f} s")
+            print(f"Mode Detection     : {mode_time:.2f} s")
+            print(f"Language Detection : {language_time:.2f} s")
+            print(f"Gemini Reply       : {reply_time:.2f} s")
+
+            print("-" * 60)
+            print(f"Total Time         : {total_time:.2f} s")
+            print("=" * 60)
 
             print("=" * 60)
 
