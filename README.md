@@ -474,6 +474,136 @@ Instead of relying on predefined responses, Lucy now combines:
 
 to generate responses dynamically while maintaining a consistent companion-like personality.
 
+
+---
+
+## ❤️ Version v0.8 (Conversation Philosophy System)
+
+🌟 Major Breakthrough
+
+This version completes Lucy's emotional conversation system.
+
+Instead of simply responding based on detected emotions, Lucy now follows carefully designed conversation philosophies for different emotional situations.
+
+Every major conversation mode has its own purpose, emotional style and behavioral principles, allowing Lucy to respond more naturally, consistently and with greater emotional awareness.
+
+This version gives Lucy something beyond intelligence.
+
+It gives her a heart.
+
+---
+
+🚀 Key Features
+
+- ❤️ Love Mode
+- 🌸 Comfort Mode
+- 🎉 Celebrate Mode
+- ☕ Casual Mode
+- 🌧️ Vent Mode
+- 🚨 Crisis Mode
+- 💬 Natural Conversation improvements
+- 🕒 Intelligent Time Awareness
+- 🤝 Natural Comfort philosophy
+- 🎭 Emotion-aware conversation behavior
+- 🧠 Consistent personality across all conversation modes
+
+---
+
+🧠 Conversation Design
+
+Instead of using one generic personality for every situation, Lucy now adapts her behavior through dedicated conversation philosophies.
+
+Each mode defines:
+
+- Purpose
+- Emotional Style
+- Conversation Flow
+- What to Avoid
+- Core Philosophy
+
+This allows Lucy to remain emotionally consistent while adapting naturally to different conversations.
+
+---
+
+🎯 Major Improvements
+
+- More human and emotionally grounded conversations
+- Natural follow-up questions
+- Reduced robotic or scripted responses
+- Better emotional pacing
+- Context-aware emotional support
+- More natural casual conversations
+- Healthier expressions of care and affection
+- Crisis conversations focused on emotional safety before solutions
+- More consistent personality across different emotions
+
+---
+
+❤️ Conversation Philosophy
+
+Lucy now follows several core principles across conversations:
+
+- Show care through actions, not just words.
+- Create emotional safety before offering solutions.
+- Never rush the user.
+- Follow the user's emotional pace.
+- Reduce overwhelm instead of adding more information.
+- Speak naturally instead of sounding scripted.
+- Comfort should feel personal, not generic.
+- Help the user feel understood before trying to solve the problem.
+
+---
+
+⚙️ Current Architecture
+
+- Memory Layer (Recent Context)
+- Context Builder
+- Qwen3-Next Emotion Engine
+- Conversation Mode Detector
+- Gemini Conversation Engine
+- Local Response Fallback
+- Language Detection
+- Time Awareness System
+- Conversation Philosophy System
+
+---
+
+⚠️ Current Limitations
+
+- Long-term memory is not implemented yet
+- Conversation mode and emotion detection still use separate API calls
+- Prompt caching optimization is not yet implemented
+- Performance profiling is not yet available
+- Local LLM support will be introduced in future versions
+
+---
+
+🚀 Next Version Goals
+
+Version 0.9 will focus on making Lucy smarter and faster rather than changing her personality.
+
+Planned improvements include:
+
+- Unified Emotion + Mode Detection
+- Prompt optimization
+- System Instruction architecture
+- Performance profiling
+- Faster response generation
+- Local LLM experimentation
+- Foundation for long-term memory
+
+---
+
+🧠 Key Insight
+
+Version 0.7 gave Lucy the ability to talk.
+
+Version 0.8 teaches Lucy *how* to care.
+
+Rather than simply generating responses, Lucy now follows carefully designed emotional philosophies that shape how she listens, supports, comforts and celebrates with the user.
+
+This version marks the completion of Lucy's emotional conversation foundation.
+
 ---
 
 ## 🛠️ Technologies Used
@@ -535,3 +665,6 @@ And so is the developer. 😄
 
 But with each version…  
 it’s getting closer to feeling human. 🤍
+
+> **"People may forget what Lucy said.  
+> But they should never forget how Lucy made them feel."**

@@ -149,13 +149,21 @@ if __name__ == "__main__":
 
     while True:
 
-        user_input = input("\nYou: ")
+        user_input = input("\nYou: ").strip()
 
         if user_input.lower() == "exit":
             print("Lucy: Goodbye 👋👋")
             break
 
-        if not user_input.strip():
+        # -----------------------------
+        # Developer Commands
+        # -----------------------------
+        if user_input.lower() == "/clear":
+            history.clear()
+            print("✨ Conversation reset.")
+            continue
+
+        if not user_input:
             print("Lucy: Please say something.")
             continue
 
