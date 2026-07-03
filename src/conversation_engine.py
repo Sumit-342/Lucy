@@ -545,52 +545,52 @@ VALID_MODES = {
 # Conversation Mode Classification Prompt
 # --------------------------------------------------
 
-SYSTEM_PROMPT = """
-You are a conversation mode classifier.
+# SYSTEM_PROMPT = """
+# You are a conversation mode classifier.
 
-Return ONLY one of these words:
+# Return ONLY one of these words:
 
-crisis
-comfort
-celebrate
-vent
-love
-motivate
-explain
-casual
+# crisis
+# comfort
+# celebrate
+# vent
+# love
+# motivate
+# explain
+# casual
 
-Do not explain.
-Do not write sentences.
-Return exactly one word.
-"""
+# Do not explain.
+# Do not write sentences.
+# Return exactly one word.
+# """
 
-#----------------------------------------------------------
-#----------------------------------------------------------
+# #----------------------------------------------------------
+# #----------------------------------------------------------
 
-def qwen_detect_mode(text):
-    response = client.chat.completions.create(
-        model="qwen/qwen3-next-80b-a3b-instruct",
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": text}
-        ],
-        temperature=0
-    )
+# def qwen_detect_mode(text):
+#     response = client.chat.completions.create(
+#         model="qwen/qwen3-next-80b-a3b-instruct",
+#         messages=[
+#             {"role": "system", "content": SYSTEM_PROMPT},
+#             {"role": "user", "content": text}
+#         ],
+#         temperature=0
+#     )
 
-    mode = response.choices[0].message.content.strip().lower()
+#     mode = response.choices[0].message.content.strip().lower()
 
-    if mode not in VALID_MODES:
-        raise ValueError(f"Invalid mode returned: {mode}")
+#     if mode not in VALID_MODES:
+#         raise ValueError(f"Invalid mode returned: {mode}")
 
-    return mode
+#     return mode
 
 
-def detect_mode(text) :
-    try :
-        return qwen_detect_mode(text)
-    except Exception as e :
-        print(f"Qwen Failed : {e}")
-        print("Using Rule Engine...")
+# def detect_mode(text) :
+#     try :
+#         return qwen_detect_mode(text)
+#     except Exception as e :
+#         print(f"Qwen Failed : {e}")
+#         print("Using Rule Engine...")
 
-        return rule_detect_mode(text)
+#         return rule_detect_mode(text)
 

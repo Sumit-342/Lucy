@@ -6,8 +6,8 @@ import pandas as pd
 from response_engine import get_response
 from language_detector import detect_language
 from gemini_client import generate_reply
-from emotion_engine import detect_emotion
-from conversation_engine import detect_mode
+from nlu_engine import analyze_message
+
 
 model = joblib.load("models/lucy_pipeline_v0_2.pkl")
 df_emoji = pd.read_csv("dataset/emoji_emotions_final.csv")
@@ -136,13 +136,16 @@ if __name__ == "__main__":
         context_text = get_context()
         context_time = time.perf_counter() - context_start
 
-        emotion_start = time.perf_counter()
-        emotion = detect_emotion(context_text)
-        emotion_time = time.perf_counter() - emotion_start
+        # NLU Analysis
+        nlu_start = time.perf_counter()
+        analysis = analyze_message(context_text)
+        emotion = analysis["emotion"]
+        mode = analysis["mode"]
+        nlu_time = time.perf_counter() - nlu_start
 
-        mode_start = time.perf_counter()
-        mode = detect_mode(user_input)
-        mode_time = time.perf_counter() - mode_start
+        # mode_start = time.perf_counter()
+        # mode = detect_mode(user_input)
+        # mode_time = time.perf_counter() - mode_start
 
         language_start = time.perf_counter()
         language = detect_language(user_input)
@@ -187,7 +190,7 @@ if __name__ == "__main__":
 
             print(f"Language : {language}")
             print(f"Emotion  : {emotion}")
-            print(f"Mode     : {mode}")
+            print(f"Conversation Mode     : {mode}")
 
             print("\nHistory:")
             for i, msg in enumerate(history, start=1):
@@ -201,8 +204,9 @@ if __name__ == "__main__":
             print("=" * 60)
 
             print(f"Context Build      : {context_time:.2f} s")
-            print(f"Emotion Detection  : {emotion_time:.2f} s")
-            print(f"Mode Detection     : {mode_time:.2f} s")
+            # print(f"Emotion Detection  : {emotion_time:.2f} s")
+            # print(f"Mode Detection     : {mode_time:.2f} s")
+            print(f"NLU Analysis     : {nlu_time: .2f}s")
             print(f"Language Detection : {language_time:.2f} s")
             print(f"Gemini Reply       : {reply_time:.2f} s")
 
