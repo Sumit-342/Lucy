@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from google import genai
+from google.genai import types
 from prompts.LUCY_PERSONALITY_PROMPT import SYSTEM_PROMPT
 from prompts.LUCY_PERSONALITY_PROMPT import LUCY_PERSONALITY_PROMPT
 from prompts.MODE_PROMPT import get_mode_prompt
@@ -38,12 +39,14 @@ def generate_reply(user_message,emotion,language,mode,context):
     Current Time: {now.strftime("%I:%M %p")}
     Time Period: {time_period}
     """
+    system_instruction = f"""
+    {LUCY_PERSONALITY_PROMPT}
 
-    full_prompt = f"""
+    {SYSTEM_PROMPT}
+    """
 
-{LUCY_PERSONALITY_PROMPT}
+    dynamic_prompt = f"""
 
-{SYSTEM_PROMPT}
 
 {mode_prompt}
 
@@ -82,7 +85,10 @@ User Message:
 
     response = client.models.generate_content(
         model="gemini-2.5-flash",
-        contents=full_prompt
+        contents= dynamic_prompt,
+        config=types.GenerateContentConfig(
+            system_instruction=system_instruction
+        )
     )
 
     return response.text
