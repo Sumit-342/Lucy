@@ -1,7 +1,13 @@
 import json
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime,timedelta
 import uuid
+
+
+class SessionStatus:
+    ACTIVE = "ACTIVE"
+    EXPIRED = "EXPIRED"
+    NO_SESSION = "NO_SESSION"
 
 
 class SessionManager:
@@ -73,15 +79,39 @@ class SessionManager:
 
         print("💾 Session saved.")
 
+    
+    def get_session_status(self):
+        """
+        Check the current state of the session.
+        """
+
+        if self.session is None:
+            return SessionStatus.NO_SESSION
+
+        last_activity = datetime.fromisoformat(
+            self.session["last_activity"]
+        )
+
+        current_time = datetime.now()
+
+        time_gap = current_time - last_activity
+
+        if time_gap > timedelta(hours=4):
+            return SessionStatus.EXPIRED
+
+        return SessionStatus.ACTIVE
+
 
 if __name__ == "__main__":
 
     session = SessionManager()
-    session.load_session()
-    
-    session.create_session()
 
-    session.save_session()
+    session.load_session()
+
+    status = session.get_session_status()
+
+    print("\nSession Status:")
+    print(status)
 
     print("\nCurrent Session:")
     print(json.dumps(session.session, indent=4))
