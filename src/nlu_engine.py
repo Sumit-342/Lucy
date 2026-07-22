@@ -9,17 +9,17 @@ from openai import OpenAI
 
 load_dotenv()
 
-api_key = os.getenv("NVIDIA_API_KEY")
+api_key = os.getenv("GROQ_API_KEY")
 
 if not api_key:
-    raise ValueError("NVIDIA_API_KEY not found in .env file.")
+    raise ValueError("GROQ_API_KEY not found in .env file.")
 
 # --------------------------------------------------
 # NVIDIA Client
 # --------------------------------------------------
 
 client = OpenAI(
-    base_url="https://integrate.api.nvidia.com/v1",
+    base_url="https://api.groq.com/openai/v1",
     api_key=api_key
 )
 
@@ -91,7 +91,7 @@ Return exactly this format:
 def analyze_message(text: str):
     try:
         completion = client.chat.completions.create(
-            model="qwen/qwen3-next-80b-a3b-instruct",
+            model="llama-3.3-70b-versatile",
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": text}
