@@ -1,17 +1,27 @@
 {
-    "session_id": "890eafdc-5fba-4779-9c0a-fc906961edce",
-    "created_at": "2026-07-26T12:46:04.186789",
-    "last_activity": "2026-07-26T12:46:04.188006",
+    "session_id": "f1db6046-a434-43f7-8983-aec260ed32a7",
+    "created_at": "2026-07-26T13:00:15.545740",
+    "last_activity": "2026-07-26T13:01:06.961360",
     "messages": [
         {
             "role": "user",
-            "content": "Hello Lucy!",
-            "timestamp": "2026-07-26T12:46:04.186858"
+            "content": "Hello Lucy how are u doin",
+            "timestamp": "2026-07-26T13:00:25.592334"
         },
         {
             "role": "assistant",
-            "content": "Hello! How are you?",
-            "timestamp": "2026-07-26T12:46:04.188006"
+            "content": "Heyyy! 😄 I'm doing really well, thank you for asking!\n\nHow about you? How's your afternoon shaping up? 😊",
+            "timestamp": "2026-07-26T13:00:30.649622"
+        },
+        {
+            "role": "user",
+            "content": "its going pretty good its just i am adding memoru in you",
+            "timestamp": "2026-07-26T13:01:02.807892"
+        },
+        {
+            "role": "assistant",
+            "content": "Oh, that's so nice to hear things are going pretty good! 😊 And adding memory in me, you say? That sounds... intriguing! What kind of memories are we talking about? I'm already curious! 😄",
+            "timestamp": "2026-07-26T13:01:06.961360"
         }
     ]
 }

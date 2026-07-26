@@ -7,6 +7,7 @@ from response_engine import get_response
 from language_detector import detect_language
 from gemini_client import generate_reply
 from nlu_engine import analyze_message
+from memory.session_manager import SessionManager
 
 
 model = joblib.load("models/lucy_pipeline_v0_2.pkl")
@@ -103,6 +104,13 @@ def analyze(text):                                      # output wrapper
 
 DEBUG = True
 
+session_manager = SessionManager()
+
+session_manager.load_session()
+
+if session_manager.get_session_status() != "ACTIVE":
+    session_manager.create_session()
+
 if __name__ == "__main__":
 
     while True:
@@ -131,6 +139,11 @@ if __name__ == "__main__":
         pipeline_start = time.perf_counter()
 
         update_history(user_input)
+
+        session_manager.add_message(
+            role="user",
+            content=user_input
+        )
 
         context_start = time.perf_counter()
         context_text = get_context()
@@ -219,6 +232,12 @@ if __name__ == "__main__":
         # -----------------------------
         # Lucy Response
         # -----------------------------
+
+        session_manager.add_message(
+            role="assistant",
+            content=response
+        )
+
         print("\nLucy:")
         print(response)
 
