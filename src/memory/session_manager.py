@@ -45,12 +45,12 @@ class SessionManager:
         Create a brand new conversation session.
         """
 
-        now = datetime.now().isoformat()
+        timestamp = datetime.now().isoformat()
 
         self.session = {
             "session_id" : str(uuid.uuid4()),
-            "created_at" : now,
-            "last_activity" : now,
+            "created_at" : timestamp,
+            "last_activity" : timestamp,
             "messages" : []
         }
 
@@ -101,6 +101,35 @@ class SessionManager:
 
         return SessionStatus.ACTIVE
 
+    def add_message(self, role, content):
+        """
+        Add a new message to the current session.
+        """
+
+        if self.session is None:
+            print("⚠️ No active session found.")
+            return
+
+        timestamp = datetime.now().isoformat()
+
+        message = {
+            "role": role,
+            "content": content,
+            "timestamp": timestamp
+        }
+
+        self.session["messages"].append(message)
+
+        self.session["last_activity"] = timestamp
+
+        self.save_session()
+
+        print(f"💬 {role.capitalize()} message added to session.")
+
+
+
+# Testing
+
 
 if __name__ == "__main__":
 
@@ -108,10 +137,18 @@ if __name__ == "__main__":
 
     session.load_session()
 
-    status = session.get_session_status()
+    if session.get_session_status() != "active":
+        session.create_session()
 
-    print("\nSession Status:")
-    print(status)
+    session.add_message(
+        role="user",
+        content="Hello Lucy!"
+    )
+
+    session.add_message(
+        role="assistant",
+        content="Hello! How are you?"
+    )
 
     print("\nCurrent Session:")
     print(json.dumps(session.session, indent=4))
