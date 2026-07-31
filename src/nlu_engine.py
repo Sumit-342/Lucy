@@ -1,27 +1,26 @@
-import os
+from groq_client import client
 import json
-from dotenv import load_dotenv
-from openai import OpenAI
 
-# --------------------------------------------------
-# Load Environment Variables
-# --------------------------------------------------
 
-load_dotenv()
+# # --------------------------------------------------
+# # Load Environment Variables
+# # --------------------------------------------------
 
-api_key = os.getenv("GROQ_API_KEY")
+# load_dotenv()
 
-if not api_key:
-    raise ValueError("GROQ_API_KEY not found in .env file.")
+# api_key = os.getenv("GROQ_API_KEY")
 
-# --------------------------------------------------
-# NVIDIA Client
-# --------------------------------------------------
+# if not api_key:
+#     raise ValueError("GROQ_API_KEY not found in .env file.")
 
-client = OpenAI(
-    base_url="https://api.groq.com/openai/v1",
-    api_key=api_key
-)
+# # --------------------------------------------------
+# #  GROQ Client
+# # --------------------------------------------------
+
+# client = OpenAI(
+#     base_url="https://api.groq.com/openai/v1",
+#     api_key=api_key
+# )
 
 # --------------------------------------------------
 # Emotion + Mode Classification Prompt

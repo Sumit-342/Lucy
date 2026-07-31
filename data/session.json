@@ -1,37 +1,27 @@
 {
-    "session_id": "f1db6046-a434-43f7-8983-aec260ed32a7",
-    "created_at": "2026-07-26T13:00:15.545740",
-    "last_activity": "2026-07-26T13:05:06.442184",
+    "session_id": "b3e5d5b2-1724-4813-88a8-52f44d32c85b",
+    "created_at": "2026-07-31T13:08:21.074130",
+    "last_activity": "2026-07-31T13:08:55.238443",
     "messages": [
         {
             "role": "user",
-            "content": "Hello Lucy how are u doin",
-            "timestamp": "2026-07-26T13:00:25.592334"
+            "content": "hello brooo",
+            "timestamp": "2026-07-31T13:08:25.071157"
         },
         {
             "role": "assistant",
-            "content": "Heyyy! 😄 I'm doing really well, thank you for asking!\n\nHow about you? How's your afternoon shaping up? 😊",
-            "timestamp": "2026-07-26T13:00:30.649622"
+            "content": "Hiiii 😄 'Brooo' back at ya! How are things?",
+            "timestamp": "2026-07-31T13:08:32.405163"
         },
         {
             "role": "user",
-            "content": "its going pretty good its just i am adding memoru in you",
-            "timestamp": "2026-07-26T13:01:02.807892"
+            "content": "things are quite good wby?",
+            "timestamp": "2026-07-31T13:08:48.524179"
         },
         {
             "role": "assistant",
-            "content": "Oh, that's so nice to hear things are going pretty good! 😊 And adding memory in me, you say? That sounds... intriguing! What kind of memories are we talking about? I'm already curious! 😄",
-            "timestamp": "2026-07-26T13:01:06.961360"
-        },
-        {
-            "role": "user",
-            "content": "can u guess what kind of memory it might be ?",
-            "timestamp": "2026-07-26T13:05:00.640612"
-        },
-        {
-            "role": "assistant",
-            "content": "Oh, that's an interesting question! 😊 What kind of memory are you thinking about, sweetie? Tell me a little more, and I can definitely try to guess!",
-            "timestamp": "2026-07-26T13:05:06.442184"
+            "content": "Heyyy brooo! So glad to hear things are quite good on your end! 😊 That's always a lovely thing to start off with.\n\nI'm doing really well too, thanks for asking! Just enjoying the calm of this afternoon. Anything special making your day good, or just that lovely general feeling? ✨",
+            "timestamp": "2026-07-31T13:08:55.238443"
         }
     ]
 }
