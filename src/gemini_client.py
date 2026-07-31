@@ -2,9 +2,8 @@ import os
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-from prompts.LUCY_PERSONALITY_PROMPT import SYSTEM_PROMPT
-from prompts.LUCY_PERSONALITY_PROMPT import LUCY_PERSONALITY_PROMPT
-from prompts.MODE_PROMPT import get_mode_prompt
+from src.prompts.LUCY_PERSONALITY_PROMPT import SYSTEM_PROMPT, LUCY_PERSONALITY_PROMPT
+from src.prompts.MODE_PROMPT import get_mode_prompt
 from datetime import datetime
 
 # Load .env file

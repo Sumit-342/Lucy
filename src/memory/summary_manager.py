@@ -7,6 +7,7 @@ class SummaryManager:
 
     def __init__(self, file_path="data/session_summary.json"):
         self.file_path = file_path
+        self.summary = None
 
         if not os.path.exists(self.file_path):
             self.create_summary()
@@ -29,8 +30,15 @@ class SummaryManager:
             self.create_summary()
 
         with open(self.file_path, "r", encoding="utf-8") as file:
-            return json.load(file)
+            self.summary = json.load(file)
 
+
+    def get_summary(self):
+        """
+        Return the currently loaded summary.
+        """
+
+        return self.summary
 
     def save_summary(self, summary_data):
 
@@ -39,34 +47,35 @@ class SummaryManager:
         with open(self.file_path, "w", encoding="utf-8") as file:
             json.dump(summary_data, file, indent=4)
 
+        self.summary = summary_data
+
 
     def clear_summary(self):
         self.create_summary()
+        self.load_summary()
 
 
-    def get_summary(self):
-        data = self.load_summary()
-        return data["summary"]
+  
 
 
 # Testing
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
     
-    manager = SummaryManager()
+#     manager = SummaryManager()
 
-print(manager.load_summary())
+# print(manager.load_summary())
 
-print(manager.get_summary())
+# print(manager.get_summary())
 
-manager.save_summary({
-    "summary": "Lucy and the user discussed SummaryWorker.",
-    "messages_summarized": 10
-})
+# manager.save_summary({
+#     "summary": "Lucy and the user discussed SummaryWorker.",
+#     "messages_summarized": 10
+# })
 
-print(manager.load_summary())
+# print(manager.load_summary())
 
-manager.clear_summary()
+# manager.clear_summary()
 
-print(manager.load_summary())
+# print(manager.load_summary())

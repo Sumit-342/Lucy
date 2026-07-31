@@ -1,4 +1,4 @@
-from groq_client import client
+from src.groq_client import client
 import json
 
 

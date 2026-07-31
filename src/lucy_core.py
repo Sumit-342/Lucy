@@ -3,11 +3,17 @@ import emoji
 import time
 from collections import Counter
 import pandas as pd
-from response_engine import get_response
-from language_detector import detect_language
-from gemini_client import generate_reply
-from nlu_engine import analyze_message
-from memory.session_manager import SessionManager
+
+from src.response_engine import get_response
+from src.language_detector import detect_language
+from src.gemini_client import generate_reply
+from src.nlu_engine import analyze_message
+
+from src.memory.session_manager import SessionManager, SessionStatus
+from src.memory.summary_manager import SummaryManager
+from src.memory.summary_worker import SummaryWorker
+
+
 
 
 model = joblib.load("models/lucy_pipeline_v0_2.pkl")
@@ -102,13 +108,17 @@ def analyze(text):                                      # output wrapper
     }
 
 
-DEBUG = True
+DEBUG = True   
+MIN_MESSAGE_FOR_SUMMARY = 10
 
 session_manager = SessionManager()
+summary_worker = SummaryWorker()
+summary_manager = SummaryManager()
 
 session_manager.load_session()
+summary_manager.load_summary()
 
-if session_manager.get_session_status() != "ACTIVE":
+if session_manager.get_session_status() != SessionStatus.ACTIVE:
     session_manager.create_session()
 
 if __name__ == "__main__":
@@ -244,6 +254,35 @@ if __name__ == "__main__":
         if follow_up:
             print()
             print(follow_up)
+
+       # ------------------------------------
+        #        Summary Trigger check
+        # ------------------------------------
+        summary = summary_manager.get_summary()
+
+        new_messages = session_manager.get_unsummarized_messages(
+            summary["messages_summarized"]
+        )
+
+        if len(new_messages) >= MIN_MESSAGE_FOR_SUMMARY:
+            existing_summary = summary["summary"]
+
+            updated_summary = summary_worker.generate_summary(
+                existing_summary=existing_summary,
+                new_messages=new_messages,
+                messages_already_summarized=summary["messages_summarized"]
+            )
+
+            if updated_summary is not None:
+                summary_manager.save_summary(updated_summary)
+                summary_manager.load_summary()
+
+                print("\n🧠 Session Summary Updated!")
+
+            else:
+                print("\n❌ Summary Generation Failed")
+        else:
+            print("\n📄 Summary Not Required")
             
 
 
