@@ -142,3 +142,13 @@ Example:
     "last_activity": "",
     "messages": []
 }
+
+
+---
+# Lazy AI Principle
+
+Lucy performs expensive AI operations only when they are required to answer the current user message. This minimizes latency, reduces API usage, and keeps the system efficient.
+
+---
+# 📜 Incremental Summary Principle
+A summary is never regenerated from the beginning. Once a summary exists, it is only refreshed using the existing summary plus the messages that have not yet been summarized.
