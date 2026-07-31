@@ -290,87 +290,24 @@ if __name__ == "__main__":
     existing_summary = ""
 
     new_messages = [
-    {
-        "role": "user",
-        "content": "Hey Lucy, I'm finally starting the memory system today."
-    },
-    {
-        "role": "assistant",
-        "content": "That's exciting! What's the first part you're planning to build?"
-    },
-    {
-        "role": "user",
-        "content": "I'm thinking about building SessionManager first because everything depends on it."
-    },
-    {
-        "role": "assistant",
-        "content": "That sounds like a good starting point. Once sessions are handled properly, the rest of the memory system becomes much easier."
-    },
-    {
-        "role": "user",
-        "content": "Yeah, I finished SessionManager yesterday. Today I want to build SummaryWorker."
-    },
-    {
-        "role": "assistant",
-        "content": "Nice progress! Have you already decided how the summary will be generated?"
-    },
-    {
-        "role": "user",
-        "content": "Yes. I want Groq to generate the summary instead of writing any rule-based summarizer."
-    },
-    {
-        "role": "assistant",
-        "content": "That makes sense. A language model should produce much better summaries than handwritten rules."
-    },
-    {
-        "role": "user",
-        "content": "One thing I'm worried about is hallucination. I don't want Lucy remembering things that never happened."
-    },
-    {
-        "role": "assistant",
-        "content": "That's an important concern. You'll probably need strict prompt instructions telling Groq to only summarize information explicitly present in the conversation."
-    },
-    {
-        "role": "user",
-        "content": "Exactly. We also decided to completely ignore long-term memory in session summaries."
-    },
-    {
-        "role": "assistant",
-        "content": "That's a good separation. Session memory should only help continue the current conversation."
-    },
-    {
-        "role": "user",
-        "content": "I'm honestly feeling really excited. Five months ago Lucy could only detect emotions. Now she's starting to remember conversations."
-    },
-    {
-        "role": "assistant",
-        "content": "That's a huge milestone. You should definitely celebrate it once everything is working."
-    },
-    {
-        "role": "user",
-        "content": "The only thing left now is testing the quality of the summaries."
-    },
-    {
-        "role": "assistant",
-        "content": "How are you planning to test them?"
-    },
-    {
-        "role": "user",
-        "content": "I'll create fake conversations first. If the summaries look good, then I'll integrate everything into Lucy."
-    },
-    {
-        "role": "assistant",
-        "content": "That sounds like a safe approach before connecting it to the main pipeline."
-    },
-    {
-        "role": "user",
-        "content": "I still haven't decided whether the summary should update every 10 messages or every 15 messages."
-    },
-    {
-        "role": "assistant",
-        "content": "That's a good open question. You can experiment with both and compare the quality and token usage before making the final decision."
-    }
-]
+        {
+            "role": "user",
+            "content": "Hi Lucy!"
+        },
+        {
+            "role": "assistant",
+            "content": "Hello! 😊"
+        },
+        {
+            "role": "user",
+            "content": "I'm working on your memory system."
+        },
+        {
+            "role": "assistant",
+            "content": "That's exciting! Tell me more."
+        }
+    ]
+
     result = worker.generate_summary(
         existing_summary,
         new_messages,

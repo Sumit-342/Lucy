@@ -127,6 +127,18 @@ class SessionManager:
         print(f"💬 {role.capitalize()} message added to session.")
 
 
+    def get_unsummarized_messages(self, messages_already_summarized):
+        """
+        Return only the messages that have not yet been included
+        in the session summary.
+        """
+
+        if self.session is None:
+            return []
+
+        return self.session["messages"][messages_already_summarized:]
+
+
 
 # Testing
 
