@@ -1,6 +1,12 @@
 import json
 import os
-from datetime import datetime
+from datetime import datetime,timedelta
+
+
+class SummaryStatus:
+    ACTIVE = "ACTIVE"
+    EXPIRED = "EXPIRED"
+    EMPTY = "EMPTY"
 
 
 class SummaryManager:
@@ -17,6 +23,7 @@ class SummaryManager:
         summary_data = {
             "summary": "",
             "updated_at": "",
+            "expires_at":"",
             "messages_summarized": 0
         }
 
@@ -40,9 +47,16 @@ class SummaryManager:
 
         return self.summary
 
+    
     def save_summary(self, summary_data):
 
-        summary_data["updated_at"] = datetime.now().isoformat()
+        current_time = datetime.now()
+
+        summary_data["updated_at"] = current_time.isoformat()
+
+        summary_data["expires_at"] = (
+            current_time + timedelta(hours=8)
+        ).isoformat()
 
         with open(self.file_path, "w", encoding="utf-8") as file:
             json.dump(summary_data, file, indent=4)
@@ -53,6 +67,33 @@ class SummaryManager:
     def clear_summary(self):
         self.create_summary()
         self.load_summary()
+
+
+    def get_summary_status(self):
+        """
+        Check the current state of the summary.
+        """
+
+        if self.summary is None:
+            return SummaryStatus.EMPTY
+
+        # If no summary exists yet
+        if not self.summary["summary"]:
+            return SummaryStatus.EMPTY
+
+        expires_at = self.summary.get("expires_at")
+
+        # Older summaries won't have expires_at
+        if not expires_at:
+            return SummaryStatus.EXPIRED
+
+        expires_at = datetime.fromisoformat(expires_at)
+        current_time = datetime.now()
+
+        if current_time > expires_at:
+            return SummaryStatus.EXPIRED
+
+        return SummaryStatus.ACTIVE
 
 
   

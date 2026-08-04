@@ -10,7 +10,7 @@ from src.gemini_client import generate_reply
 from src.nlu_engine import analyze_message
 
 from src.memory.session_manager import SessionManager, SessionStatus
-from src.memory.summary_manager import SummaryManager
+from src.memory.summary_manager import SummaryManager , SummaryStatus
 from src.memory.summary_worker import SummaryWorker
 
 
@@ -109,7 +109,7 @@ def analyze(text):                                      # output wrapper
 
 
 DEBUG = True   
-MIN_MESSAGE_FOR_SUMMARY = 10
+MIN_MESSAGE_FOR_SUMMARY = 4
 
 session_manager = SessionManager()
 summary_worker = SummaryWorker()
@@ -120,6 +120,9 @@ summary_manager.load_summary()
 
 if session_manager.get_session_status() != SessionStatus.ACTIVE:
     session_manager.create_session()
+
+if summary_manager.get_summary_status() == SummaryStatus.EXPIRED:
+    summary_manager.clear_summary()
 
 if __name__ == "__main__":
 

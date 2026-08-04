@@ -1,6 +1,6 @@
 from src.groq_client import client
 
-MIN_MESSAGES_FOR_SUMMARY = 10
+MIN_MESSAGES_FOR_SUMMARY = 4
 
 SYSTEM_PROMPT = """
 
