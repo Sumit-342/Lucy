@@ -51,7 +51,8 @@ class SessionManager:
             "session_id" : str(uuid.uuid4()),
             "created_at" : timestamp,
             "last_activity" : timestamp,
-            "messages" : []
+            "messages" : [],
+            "summary_resume_pending": False
         }
 
         print("✨🌟 New Session created")
@@ -101,6 +102,23 @@ class SessionManager:
 
         return SessionStatus.ACTIVE
 
+
+    def get_inactivity_duration(self):
+        """
+        Return how long it has been since the last session activity.
+        """
+
+        if self.session is None:
+            return None
+
+        last_activity = datetime.fromisoformat(
+            self.session["last_activity"]
+        )
+
+        return datetime.now() - last_activity
+
+
+    
     def add_message(self, role, content):
         """
         Add a new message to the current session.
@@ -137,6 +155,40 @@ class SessionManager:
             return []
 
         return self.session["messages"][messages_already_summarized:]
+
+
+    def mark_summary_resume_pending(self):
+        """
+        Mark that the next message should receive the session summary.
+        """
+
+        if self.session is None:
+            return
+
+        self.session["summary_resume_pending"] = True
+        self.save_session()
+
+
+    def is_summary_resume_pending(self):
+        """
+        Check whether the next message should receive the session summary.
+        """
+
+        if self.session is None:
+            return False
+
+        return self.session.get("summary_resume_pending", False)
+
+    def clear_summary_resume_pending(self):
+        """
+        Mark that the resume summary has already been sent.
+        """
+
+        if self.session is None:
+            return
+
+        self.session["summary_resume_pending"] = False
+        self.save_session()
 
 
 

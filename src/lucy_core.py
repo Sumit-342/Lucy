@@ -1,6 +1,7 @@
 import joblib
 import emoji
 import time
+from datetime import datetime , timedelta
 from collections import Counter
 import pandas as pd
 
@@ -81,19 +82,31 @@ def predict_final(text):                                        # text + emoji f
             return emoji_emotion,text_confidence , "emoji_priority"
 
 history = []
-def update_history(new_msg):
-    
-    history.append(new_msg)
 
-    if len(history)>3:
+
+def update_history(role, content):
+
+    history.append({
+        "role": role,
+        "content": content
+    })
+
+    if len(history) > 6:
         history.pop(0)
 
 
 def get_context():
-    if len(history) == 1:
-        return history[0]
-    
-    return " ".join(history)
+
+    formatted_history = []
+
+    for message in history:
+        role = "User" if message["role"] == "user" else "Lucy"
+
+        formatted_history.append(
+            f"{role}: {message['content']}"
+        )
+
+    return "\n".join(formatted_history)
     
 
 
@@ -110,6 +123,7 @@ def analyze(text):                                      # output wrapper
 
 DEBUG = True   
 MIN_MESSAGE_FOR_SUMMARY = 4
+SUMMARY_RESUME_THRESHOLD = timedelta(seconds=30)
 
 session_manager = SessionManager()
 summary_worker = SummaryWorker()
@@ -151,11 +165,39 @@ if __name__ == "__main__":
         # -----------------------------
         pipeline_start = time.perf_counter()
 
-        update_history(user_input)
+        # Check inactivity BEFORE updating session activity
+        inactivity = session_manager.get_inactivity_duration()
+
+        if (
+            inactivity is not None
+            and inactivity >= SUMMARY_RESUME_THRESHOLD
+            and not session_manager.is_summary_resume_pending()
+        ):
+            session_manager.mark_summary_resume_pending()
+
+        update_history(
+            role="user",
+            content= user_input
+        )
 
         session_manager.add_message(
             role="user",
             content=user_input
+        )
+
+        send_summary = (
+            session_manager.is_summary_resume_pending()
+            and summary_manager.get_summary_status() == SummaryStatus.ACTIVE
+        )
+
+        summary_for_gemini = None
+
+        if send_summary :
+            summary_for_gemini = summary_manager.get_summary()["summary"]
+
+        print(
+            f"🤓 Summary Sent to Gemini : "
+            f"{'YES' if summary_for_gemini else 'NO'}"
         )
 
         context_start = time.perf_counter()
@@ -182,13 +224,20 @@ if __name__ == "__main__":
         # -----------------------------
         try:
             reply_start = time.perf_counter()
+
             response = generate_reply(
                 user_message = user_input,
                 emotion=emotion,
                 language=language,
                 mode=mode,
-                context=context_text
+                context=context_text,
+                summary=summary_for_gemini
+
             )
+
+            if summary_for_gemini is not None:
+                session_manager.clear_summary_resume_pending()
+
             reply_time = time.perf_counter() - reply_start
 
             follow_up = None
@@ -245,6 +294,11 @@ if __name__ == "__main__":
         # -----------------------------
         # Lucy Response
         # -----------------------------
+
+        update_history(
+            role="assistant",
+            content=response
+        )
 
         session_manager.add_message(
             role="assistant",

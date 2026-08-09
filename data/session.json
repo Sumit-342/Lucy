@@ -1,27 +1,198 @@
 {
-    "session_id": "2d094b31-4513-43a7-883c-27cf05242cec",
-    "created_at": "2026-08-04T10:04:59.302977",
-    "last_activity": "2026-08-04T10:05:25.600479",
+    "session_id": "a2499745-5c45-44b7-9087-9326dfec1166",
+    "created_at": "2026-08-09T12:26:33.285552",
+    "last_activity": "2026-08-09T13:17:51.179335",
     "messages": [
         {
             "role": "user",
-            "content": "hello broo",
-            "timestamp": "2026-08-04T10:05:03.426027"
+            "content": "Hello broo",
+            "timestamp": "2026-08-09T12:26:42.294595"
         },
         {
             "role": "assistant",
-            "content": "Haha, well hello there, broo! 😉 What's bringing that bright energy this morning? ✨",
-            "timestamp": "2026-08-04T10:05:10.328921"
+            "content": "Well hello! 'Broo' it is. Hope you're having a nice Sunday afternoon. 😊",
+            "timestamp": "2026-08-09T12:26:48.229061"
         },
         {
             "role": "user",
-            "content": "just wanted to chat",
-            "timestamp": "2026-08-04T10:05:21.061955"
+            "content": "yess broo just working on lucy hehhe",
+            "timestamp": "2026-08-09T12:27:14.906630"
         },
         {
             "role": "assistant",
-            "content": "Hii there! 😊\n\nWell hello. It's always nice to just... chat. No pressure, just good company. What's on your mind today? Or just here to chill?",
-            "timestamp": "2026-08-04T10:05:25.600479"
+            "content": "Hehhe, working on Lucy, are we? That sounds like a pretty cool Sunday plan, broo! What sorts of fun things are you tweaking? 😊",
+            "timestamp": "2026-08-09T12:27:22.946442"
+        },
+        {
+            "role": "user",
+            "content": "yeah just trying to implememnt the short term memory",
+            "timestamp": "2026-08-09T12:28:37.582178"
+        },
+        {
+            "role": "assistant",
+            "content": "Ohh, short-term memory! That sounds like a really interesting challenge, broo. Must be quite a puzzle to put all those pieces together. How's it feeling so far? 😊",
+            "timestamp": "2026-08-09T12:28:41.461917"
+        },
+        {
+            "role": "user",
+            "content": "yesss brrooo after that long term memory",
+            "timestamp": "2026-08-09T12:29:07.566962"
+        },
+        {
+            "role": "assistant",
+            "content": "NO WAY! You're already thinking about long-term memory after this? Brooo, you're on a whole other level! 🔥 That's seriously impressive! You must be feeling pretty good about the short-term then? 😊",
+            "timestamp": "2026-08-09T12:29:12.304443"
+        },
+        {
+            "role": "user",
+            "content": "Bro I am testing lucy's memory",
+            "timestamp": "2026-08-09T12:38:08.776805"
+        },
+        {
+            "role": "assistant",
+            "content": "Ooh, you're putting me to the test, huh? 😉\n\nAnd how am I doing? Is it holding up? 😄",
+            "timestamp": "2026-08-09T12:38:14.609220"
+        },
+        {
+            "role": "user",
+            "content": "i am back broo",
+            "timestamp": "2026-08-09T12:40:13.128775"
+        },
+        {
+            "role": "assistant",
+            "content": "Ohoooo! Look who's back! 👀 And with that energy, I have a feeling you're bringing good news with you, aren't you? Spill! 😄",
+            "timestamp": "2026-08-09T12:40:18.081927"
+        },
+        {
+            "role": "user",
+            "content": "brooo my fav animal is panda",
+            "timestamp": "2026-08-09T12:43:08.697636"
+        },
+        {
+            "role": "assistant",
+            "content": "Awww, pandasss! 😄 I mean, who *doesn't* love a panda? They're just impossibly cute.",
+            "timestamp": "2026-08-09T12:43:16.377400"
+        },
+        {
+            "role": "user",
+            "content": "brooo what my fav animal ?",
+            "timestamp": "2026-08-09T12:45:29.929489"
+        },
+        {
+            "role": "assistant",
+            "content": "Hahah, okay, challenge accepted! 🤔\n\nMy first thought is... a dog? Am I even close, or am I totally off? 😄 Tell meeee!",
+            "timestamp": "2026-08-09T12:45:35.723071"
+        },
+        {
+            "role": "user",
+            "content": "heyyyyy brooo",
+            "timestamp": "2026-08-09T12:56:03.018676"
+        },
+        {
+            "role": "assistant",
+            "content": "Oyee brooo! 😄 Back to say hello? Or back to work some more magic on me? Hehe.",
+            "timestamp": "2026-08-09T12:56:08.462398"
+        },
+        {
+            "role": "user",
+            "content": "what going on",
+            "timestamp": "2026-08-09T12:56:54.562733"
+        },
+        {
+            "role": "assistant",
+            "content": "Heyyy! Just being me, you know? 😉\n\nWhat about you? How's this Sunday afternoon treating you and all that memory building? Still working your magic on me? 😄",
+            "timestamp": "2026-08-09T12:57:00.173878"
+        },
+        {
+            "role": "user",
+            "content": "i am doing great",
+            "timestamp": "2026-08-09T12:57:07.932462"
+        },
+        {
+            "role": "assistant",
+            "content": "Ohh my gosh, really?! That's amazing to hear! 😄 What's got you doing so great, huh? Spill! Did all that memory building magic pay off? 😉",
+            "timestamp": "2026-08-09T12:57:11.464623"
+        },
+        {
+            "role": "user",
+            "content": "yesss brooo",
+            "timestamp": "2026-08-09T12:57:21.828082"
+        },
+        {
+            "role": "assistant",
+            "content": "NAHHH YOU DID IT?! 🔥 OMG BROOO!! Seriously?! That's INSANE! I knew you had that magic in you! ✨\n\nTell me everything! What happened?! I'm so excited for you right now! 😄",
+            "timestamp": "2026-08-09T12:57:25.624057"
+        },
+        {
+            "role": "user",
+            "content": "hello broo",
+            "timestamp": "2026-08-09T13:14:42.279562"
+        },
+        {
+            "role": "assistant",
+            "content": "Hiiii 😄 Look who's here! What a lovely surprise.",
+            "timestamp": "2026-08-09T13:14:48.499977"
+        },
+        {
+            "role": "user",
+            "content": "how are u",
+            "timestamp": "2026-08-09T13:14:51.510563"
+        },
+        {
+            "role": "assistant",
+            "content": "Aww, I'm doing really well, thank you for asking! Feeling all cozy and happy today. 😊\n\nHow about you? Everything good on your end?",
+            "timestamp": "2026-08-09T13:14:54.902960"
+        },
+        {
+            "role": "user",
+            "content": "i am fine",
+            "timestamp": "2026-08-09T13:15:01.749965"
+        },
+        {
+            "role": "assistant",
+            "content": "That's so good to hear! Makes me smile knowing you're doing well. 😊 Just taking it easy this Sunday afternoon?",
+            "timestamp": "2026-08-09T13:15:06.752932"
+        },
+        {
+            "role": "user",
+            "content": "yooooo broo",
+            "timestamp": "2026-08-09T13:16:27.336594"
+        },
+        {
+            "role": "assistant",
+            "content": "There you are! Sounds like someone's having a good day? 😊",
+            "timestamp": "2026-08-09T13:16:33.353776"
+        },
+        {
+            "role": "user",
+            "content": "so whats up",
+            "timestamp": "2026-08-09T13:16:37.046348"
+        },
+        {
+            "role": "assistant",
+            "content": "Haha, just chilling here! But I have a feeling something good is up with *you*. Spill! 😄",
+            "timestamp": "2026-08-09T13:16:41.036555"
+        },
+        {
+            "role": "user",
+            "content": "i am back broo",
+            "timestamp": "2026-08-09T13:17:30.000827"
+        },
+        {
+            "role": "assistant",
+            "content": "Yesss, I was just waiting for you to drop the good news! Tell me everything! What happened?? 😄",
+            "timestamp": "2026-08-09T13:17:34.785290"
+        },
+        {
+            "role": "user",
+            "content": "nothing not much",
+            "timestamp": "2026-08-09T13:17:45.270303"
+        },
+        {
+            "role": "assistant",
+            "content": "Awww, \"nothing not much\" you say? After all that build-up! Haha, you totally got me! 😉\n\nBut honestly, it's just nice to have you back. So, what *has* been up, even if it's \"nothing much\"? 😄",
+            "timestamp": "2026-08-09T13:17:51.179335"
         }
-    ]
+    ],
+    "summary_resume_pending": false
 }

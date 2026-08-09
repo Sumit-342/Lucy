@@ -16,7 +16,7 @@ api_key = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=api_key)
 
 
-def generate_reply(user_message,emotion,language,mode,context):
+def generate_reply(user_message,emotion,language,mode,context,summary = None):
     mode_prompt = get_mode_prompt(mode)
 
     now = datetime.now()
@@ -42,6 +42,19 @@ def generate_reply(user_message,emotion,language,mode,context):
     {LUCY_PERSONALITY_PROMPT}
 
     {SYSTEM_PROMPT}
+    """
+
+    previous_summary = ""
+
+    if summary:
+        previous_summary = f"""
+    Previous Conversation Summary:
+
+    {summary}
+
+    This is a summary of the conversation before the user returned.
+    Treat it as historical context, NOT as part of the recent conversation.
+    Do not respond to the summary directly.
     """
 
     dynamic_prompt = f"""
@@ -70,6 +83,8 @@ Never say things like:
 "You are anxious."
 
 Instead, naturally reflect the user's feelings through empathetic conversation.
+
+{previous_summary}
 
 Conversation Context:
 {context}

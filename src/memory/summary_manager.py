@@ -94,8 +94,7 @@ class SummaryManager:
             return SummaryStatus.EXPIRED
 
         return SummaryStatus.ACTIVE
-
-
+    
   
 
 
