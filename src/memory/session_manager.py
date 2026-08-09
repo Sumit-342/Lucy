@@ -118,6 +118,27 @@ class SessionManager:
         return datetime.now() - last_activity
 
 
+    def prepare_resume_state(self, resume_threshold):
+        """
+        Determine whether this startup is a resumed conversation.
+
+        This is checked only once when Lucy starts.
+        """
+
+        if self.session is None:
+            return
+
+        inactivity = self.get_inactivity_duration()
+
+        if (
+            inactivity is not None
+            and inactivity >= resume_threshold
+        ):
+            self.mark_summary_resume_pending()
+        else:
+            self.clear_summary_resume_pending()
+
+
     
     def add_message(self, role, content):
         """

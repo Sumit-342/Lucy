@@ -128,6 +128,9 @@ SUMMARY_RESUME_THRESHOLD = timedelta(seconds=30)
 session_manager = SessionManager()
 summary_worker = SummaryWorker()
 summary_manager = SummaryManager()
+session_manager.prepare_resume_state(
+    SUMMARY_RESUME_THRESHOLD
+)
 
 session_manager.load_session()
 summary_manager.load_summary()
@@ -137,6 +140,10 @@ if session_manager.get_session_status() != SessionStatus.ACTIVE:
 
 if summary_manager.get_summary_status() == SummaryStatus.EXPIRED:
     summary_manager.clear_summary()
+
+session_manager.prepare_resume_state(
+    SUMMARY_RESUME_THRESHOLD
+)
 
 if __name__ == "__main__":
 
@@ -164,16 +171,6 @@ if __name__ == "__main__":
         # Lucy Pipeline
         # -----------------------------
         pipeline_start = time.perf_counter()
-
-        # Check inactivity BEFORE updating session activity
-        inactivity = session_manager.get_inactivity_duration()
-
-        if (
-            inactivity is not None
-            and inactivity >= SUMMARY_RESUME_THRESHOLD
-            and not session_manager.is_summary_resume_pending()
-        ):
-            session_manager.mark_summary_resume_pending()
 
         update_history(
             role="user",
